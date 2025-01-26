@@ -34,13 +34,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Header />
+        {/* <Header /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
         <ScrollRestoration />
         <Scripts />
       </body>
-      
     </html>
   );
 }
