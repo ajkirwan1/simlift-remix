@@ -59,9 +59,10 @@ export default function Index() {
           </div>
         </section>
         <section className="relative w-full h-screen snap-center">
-          <div className="h-20v bg-sky-950">
+          <div className="h-20v bg-sky-950" />
+          <div className="block content-center h-80v">
             <Swiper
-              className="h-48"
+              className="h-3/6"
               modules={[Navigation]}
               slidesPerView={1}
               navigation
@@ -83,25 +84,57 @@ export default function Index() {
               <SwiperSlide className="flex align-middle justify-center">
                 <div className="flex h-full justify-center content-center">
                   <img src={liftM} alt=""></img>
-                  <p>2</p>
+                  <div className="flex flex-col basis-1/4">
+                    <h2>SIMLIFT S</h2>
+                    <p>
+                      Electric projector lift recommended for small size
+                      Business projectors.Lift with projector requires 15 cm
+                      distance between ceiling and false ceiling.Projector power
+                      and signal cables are secured wit Easy-chain ® guide.
+                    </p>
+                  </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
                 <div className="flex h-full justify-center content-center">
                   <img src={liftFlap} alt=""></img>
-                  <p>3</p>
+                  <div className="flex flex-col basis-1/4">
+                    <h2>SIMLIFT S</h2>
+                    <p>
+                      Electric projector lift recommended for small size
+                      Business projectors.Lift with projector requires 15 cm
+                      distance between ceiling and false ceiling.Projector power
+                      and signal cables are secured wit Easy-chain ® guide.
+                    </p>
+                  </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
                 <div className="flex h-full justify-center content-center">
                   <img src={liftKlap} alt=""></img>
-                  <p>4</p>
+                  <div className="flex flex-col basis-1/4">
+                    <h2>SIMLIFT S</h2>
+                    <p>
+                      Electric projector lift recommended for small size
+                      Business projectors.Lift with projector requires 15 cm
+                      distance between ceiling and false ceiling.Projector power
+                      and signal cables are secured wit Easy-chain ® guide.
+                    </p>
+                  </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
                 <div className="flex h-full justify-center content-center">
                   <img src={liftXL} alt=""></img>
-                  <p>5</p>
+                  <div className="flex flex-col basis-1/4">
+                    <h2>SIMLIFT S</h2>
+                    <p>
+                      Electric projector lift recommended for small size
+                      Business projectors.Lift with projector requires 15 cm
+                      distance between ceiling and false ceiling.Projector power
+                      and signal cables are secured wit Easy-chain ® guide.
+                    </p>
+                  </div>
                 </div>
               </SwiperSlide>
             </Swiper>
