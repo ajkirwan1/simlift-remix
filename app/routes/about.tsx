@@ -1,11 +1,13 @@
 /** @format */
-import { Form, redirect } from "@remix-run/react";
+import { Form, redirect, useActionData } from "@remix-run/react";
 import { contactFormSchema } from "../../validation/contact-form-schema";
-import { useActionData } from "@remix-run/react";
-export default function Contact() {
+import Header from "~/components/header";
+export default function About() {
   const actionData = useActionData();
 
   return (
+    <div className="bg-sky-950 h-100v">
+    <Header></Header>
     <div>
       Contact
       <Form method="post">
@@ -21,14 +23,6 @@ export default function Contact() {
         <button type="submit">Submit</button>
       </Form>
     </div>
+    </div>
   );
-}
-
-export async function action({ request }) {
-  const formData = await request.formData();
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const tel = formData.get("tel");
-
-  return redirect("/");
 }

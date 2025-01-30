@@ -3,8 +3,8 @@
 import type { MetaFunction } from "@remix-run/node";
 import heroImage from "/public/1picture.jpg";
 import glassesImage from "/public/glasses.jpg";
-import Header from "~/components/header";
-import { Navigation } from "swiper/modules";
+import HeaderHero from "~/components/header-hero";
+import { Navigation, Autoplay } from "swiper/modules";
 import liftS from "/public/products/SIMLIFT_S_small.jpg";
 import liftM from "/public/products/Simlift_M_small.jpg";
 import liftFlap from "/public/products/SimliftS_FLAP_small.jpg";
@@ -27,7 +27,7 @@ export default function Index() {
   return (
     <>
       <div className="fixed top-0 w-full z-10 border-b-1">
-        <Header />
+        <HeaderHero />
       </div>
       <div className="snap-y snap-mandatory overflow-y-scroll h-screen">
         <div className="relative w-full h-screen snap-center snap-always">
@@ -63,15 +63,17 @@ export default function Index() {
           <div className="block content-center h-80v">
             <Swiper
               className="h-3/6"
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
               slidesPerView={1}
               navigation
+              autoplay
+              loop={true}
             >
               <SwiperSlide>
                 <div className="flex h-full justify-center content-center">
                   <img src={liftS} alt=""></img>
-                  <div className="flex flex-col basis-1/4">
-                    <h2>SIMLIFT S</h2>
+                  <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
+                    <h2 className="text-3xl">SIMLIFT S</h2>
                     <p>
                       Electric projector lift recommended for small size
                       Business projectors.Lift with projector requires 15 cm
@@ -84,8 +86,8 @@ export default function Index() {
               <SwiperSlide className="flex align-middle justify-center">
                 <div className="flex h-full justify-center content-center">
                   <img src={liftM} alt=""></img>
-                  <div className="flex flex-col basis-1/4">
-                    <h2>SIMLIFT S</h2>
+                  <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
+                    <h2 className="text-3xl">SIMLIFT S</h2>
                     <p>
                       Electric projector lift recommended for small size
                       Business projectors.Lift with projector requires 15 cm
@@ -98,8 +100,8 @@ export default function Index() {
               <SwiperSlide className="flex align-middle justify-center">
                 <div className="flex h-full justify-center content-center">
                   <img src={liftFlap} alt=""></img>
-                  <div className="flex flex-col basis-1/4">
-                    <h2>SIMLIFT S</h2>
+                  <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
+                    <h2 className="text-3xl">SIMLIFT S</h2>
                     <p>
                       Electric projector lift recommended for small size
                       Business projectors.Lift with projector requires 15 cm
@@ -112,8 +114,8 @@ export default function Index() {
               <SwiperSlide className="flex align-middle justify-center">
                 <div className="flex h-full justify-center content-center">
                   <img src={liftKlap} alt=""></img>
-                  <div className="flex flex-col basis-1/4">
-                    <h2>SIMLIFT S</h2>
+                  <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
+                    <h2 className="text-3xl">SIMLIFT S</h2>
                     <p>
                       Electric projector lift recommended for small size
                       Business projectors.Lift with projector requires 15 cm
@@ -126,8 +128,8 @@ export default function Index() {
               <SwiperSlide className="flex align-middle justify-center">
                 <div className="flex h-full justify-center content-center">
                   <img src={liftXL} alt=""></img>
-                  <div className="flex flex-col basis-1/4">
-                    <h2>SIMLIFT S</h2>
+                  <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
+                    <h2 className="text-3xl">SIMLIFT S</h2>
                     <p>
                       Electric projector lift recommended for small size
                       Business projectors.Lift with projector requires 15 cm
@@ -141,50 +143,6 @@ export default function Index() {
           </div>
         </section>
       </div>
-
-      {/* <Swiper
-        className="h-48"
-        modules={[Navigation]}
-        slidesPerView={3}
-        navigation
-      >
-        <SwiperSlide>
-          <div className="flex h-full justify-center content-center">
-            <img src={remixIcon} alt=""></img>
-            <p>1</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center">
-          <div className="flex h-full justify-center content-center">
-            <img src={remixIcon} alt=""></img>
-            <p>2</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center">
-          <div className="flex h-full justify-center content-center">
-            <img src={remixIcon} alt=""></img>
-            <p>3</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center">
-          <div className="flex h-full justify-center content-center">
-            <img src={remixIcon} alt=""></img>
-            <p>4</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center">
-          <div className="flex h-full justify-center content-center">
-            <img src={remixIcon} alt=""></img>
-            <p>5</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center">
-          <div className="flex justify-center">
-            <img src={remixIcon} alt=""></img>
-            <p>6</p>
-          </div>
-        </SwiperSlide>
-      </Swiper> */}
     </>
   );
 }
