@@ -4,7 +4,7 @@ import logo from "@public/Simlift.png";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center h-20v text-white">
+    <header className="flex justify-between items-center h-20v bg-sky-950 text-white">
       <NavLink to="/" className="flex items-center h-full">
         <img alt="" src={logo} className="ml-8 h-1/2" />
       </NavLink>
