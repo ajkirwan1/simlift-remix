@@ -30,73 +30,75 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <Form
-            method="post"
-            className="grid gap-4 bg-white p-6 rounded-md  basis-3/6"
-          >
-            <span>Enquire now</span>
-            <p className="col-start-1 col-end-2">
-              <label className="flex flex-col">
-                Email Address:
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Mr blogs"
-                  // value="ajkirwan1@gmail.com"
-                  className="border-2 border-solid"
-                ></input>
-              </label>
-              {actionData?.email ? <span>{actionData.email}</span> : null}
-            </p>
-            <p className="col-start-1 col-end-2">
-              <label className="flex flex-col">
-                Name:
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Mr blogs"
-                  // value="ajkirwan1@gmail.com"
-                  className="border-2 border-solid"
-                ></input>
-              </label>
-              {actionData?.name ? <span>{actionData.name}</span> : null}
-            </p>
-            <p className="col-start-1 col-end-2">
-              <label className="flex flex-col">
-                Contact number
-                <input
-                  type="tel"
-                  name="tel"
-                  placeholder="+447095519529"
-                  // value="ajkirwan1@gmail.com"
-                  className="border-2 border-solid"
-                ></input>
-              </label>
-              {actionData?.phone ? <span>{actionData.phone}</span> : null}
-            </p>
-            <p className="row-start-1 row-end-4 col-start-2 ">
-              <label className="flex flex-col h-full">
-                Message
-                <textarea
-                  name="message"
-                  placeholder="I would like to enquire about..."
-                  rows={5}
-                  className="border-2 border-solid basis-full "
-                  // value="ajkirwan1@gmail.com"
-                ></textarea>
-              </label>
-              {actionData?.message ? <span>{actionData.message}</span> : null}
-            </p>
-            <button
-              type="submit"
-              className="border-2 border-solid w-32 h-10 m-auto"
+          <div className=" basis-3/6">
+            <span className="text-white text-2xl">Enquire now</span>
+            <Form
+              method="post"
+              className="grid grid-rows-[10vh_10vh_10vh_10vh] grid-cols-[50%_50%] h-fit bg-white p-6 rounded-md mt-2"
             >
-              Submit
-            </button>
-          </Form>
+              <p className="col-start-1 col-end-2 h-full w-5/6">
+                <label className="flex flex-col">
+                  Email Address:
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Mr blogs"
+                    // value="ajkirwan1@gmail.com"
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mt-2"
+                  ></input>
+                </label>
+                {actionData?.email ? <span>{actionData.email}</span> : null}
+              </p>
+              <p className="col-start-1 col-end-2 h-full w-5/6">
+                <label className="flex flex-col">
+                  Name:
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Mr blogs"
+                    // value="ajkirwan1@gmail.com"
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2  mt-2"
+                  ></input>
+                </label>
+                {actionData?.name ? <span>{actionData.name}</span> : null}
+              </p>
+              <p className="col-start-1 col-end-2 h-full w-5/6">
+                <label className="flex flex-col">
+                  Contact number
+                  <input
+                    type="tel"
+                    name="tel"
+                    placeholder="+447095519529"
+                    // value="ajkirwan1@gmail.com"
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2  mt-2"
+                  ></input>
+                </label>
+                {actionData?.phone ? <span>{actionData.phone}</span> : null}
+              </p>
+              <p className="row-start-1 row-end-4 col-start-2 h-full">
+                <label className="flex flex-col h-full">
+                  Message
+                  <textarea
+                    name="message"
+                    placeholder="I would like to enquire about..."
+                    rows={5}
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2  mt-2"
+                    // value="ajkirwan1@gmail.com"
+                  ></textarea>
+                </label>
+                {actionData?.message ? <span>{actionData.message}</span> : null}
+              </p>
+              <button
+                type="submit"
+                className="border border-solid w-32 h-10 m-auto rounded-md bg-sky-900 text-white text-sm font-light hover:bg-sky-800"
+              >
+                Submit
+              </button>
+            </Form>
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

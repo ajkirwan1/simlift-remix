@@ -21,6 +21,9 @@ export default {
         "90v": "90vh",
         "100v": "100vh",
       },
+      borderWidth: {
+          "1px": "1"
+      },
       fontFamily: {
         sans: [
           "Inter",
