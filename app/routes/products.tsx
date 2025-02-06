@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /** @format */
 import React, { useState } from "react";
 import Header from "~/components/header";
@@ -119,7 +122,7 @@ const Modal = (props: ModalProps) => {
       className="fixed h-full w-screen bg-black bg-opacity-80 flex justify-center items-center"
       // onClick={props.handleClick}
     >
-      <div className="w-2/4 border border-orange-900 border rounded-2xl shadow-lg bg-white text-black p-2">
+      <div className="w-2/4 border border-orange-900 rounded-2xl shadow-lg bg-white text-black p-2">
         <div className="ml-4">
           <h2 className="text-3xl mt-10">{props.chosenItem.name}</h2>
           <h3 className="text-2xl mt-10">Features:</h3>

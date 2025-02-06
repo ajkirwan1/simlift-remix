@@ -1,10 +1,12 @@
 /** @format */
 
 import type { MetaFunction } from "@remix-run/node";
+import { useState } from "react";
 import heroImage from "/public/1picture.jpg";
 import glassesImage from "/public/glasses.jpg";
 import HeaderHero from "~/components/header-hero";
 import Footer from "~/components/footer";
+import Modal from "~/components/modal";
 import { Navigation, Autoplay } from "swiper/modules";
 import guarantee from "/public/blackguarantee.png";
 import process from "/public/process.png";
@@ -43,6 +45,13 @@ const item = {
     },
   },
 };
+
+const modalData = [
+  "Simlift’s ceiling-mounted projectors are crafted with precision engineering, designed to deliver flawless performance in any environment. Our cutting-edge technology ensures a seamless, stable, and precise viewing experience, setting a new standard for projection solutions.",
+  "We take quality assurance seriously. Each Simlift projector undergoes rigorous testing to ensure reliability, durability, and consistent performance. Our commitment to excellence means you can trust every installation for years to come.",
+  "With over 20 years of manufacturing experience, Simlift has perfected the art of ceiling-mounted projectors. Our long-standing expertise guarantees that every product is built to the highest standards, ensuring both innovation and reliability in every unit."
+];
+
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -51,6 +60,19 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const [backdropOpen, setBackdropOpen] = useState(false);
+  const [chosenItem, setChosenItem] = useState(null);
+
+  const handleModal = (index) => {
+    setChosenItem(modalData[index]);
+    setBackdropOpen((val) => !val);
+    if (backdropOpen) {
+      document.body.style.overflow = "unset";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  };
+
   return (
     <>
       <div className="fixed top-0 w-full z-10 border-b-1">
@@ -78,6 +100,11 @@ export default function Index() {
           </motion.div>
         </div>
         <section className="relative w-full h-screen snap-center ">
+          {backdropOpen && (
+            <div>
+              <Modal handleModal={handleModal} chosenItem={chosenItem}/>
+            </div>
+          )}
           <img
             src={glassesImage}
             alt=""
@@ -104,29 +131,32 @@ export default function Index() {
             <motion.div
               className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer"
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center"
               variants={item}
+              onClick={() => handleModal(0)}
             >
               <img alt="" src={process} className="h-14 w-auto"></img>
-              <p className="text-black text-2xl mb-2">Some text</p>
+              <p className="text-black text-2xl mb-2">Precision engineering</p>
             </motion.div>
             <motion.div
               className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer"
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center"
               variants={item}
+              onClick={() => handleModal(1)}
             >
               <img alt="" src={testpassed} className="h-14 w-auto"></img>
-              <p className="text-black text-2xl mb-2">Some text</p>
+              <p className="text-black text-2xl mb-2">Quality assurance</p>
             </motion.div>
             <motion.div
               className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer"
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center"
               variants={item}
+              onClick={() => handleModal(2)}
             >
               <img alt="" src={guarantee} className="h-14 w-auto"></img>
-              <p className="text-black text-2xl mb-2">Some text</p>
+              <p className="text-black text-2xl mb-2">20 years of manufacturing</p>
             </motion.div>
           </motion.div>
         </section>
