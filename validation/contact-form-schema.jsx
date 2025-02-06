@@ -11,11 +11,10 @@ export const contactFormSchema = z.object({
   phone: z
     .string()
     .trim()
-    .min(1, { message: "Contact number field is required" })
+    .min(1, { message: "Contact number is required" })
     .max(30, { message: "Too many characters" }),
   email: z
     .string()
-    .email()
     .trim()
     .min(1, { message: "Email field is required" })
     .max(31, { message: "Too many characters" }),

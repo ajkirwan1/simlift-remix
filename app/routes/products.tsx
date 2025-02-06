@@ -117,9 +117,9 @@ const Modal = (props: ModalProps) => {
   return (
     <div
       className="fixed h-full w-screen bg-black bg-opacity-80 flex justify-center items-center"
-      onClick={props.handleClick}
+      // onClick={props.handleClick}
     >
-      <div className="h-2/3 w-2/4 border border-orange-900 border rounded-2xl shadow-lg bg-white text-black ">
+      <div className="w-2/4 border border-orange-900 border rounded-2xl shadow-lg bg-white text-black p-2">
         <div className="ml-4">
           <h2 className="text-3xl mt-10">{props.chosenItem.name}</h2>
           <h3 className="text-2xl mt-10">Features:</h3>
@@ -135,8 +135,9 @@ const Modal = (props: ModalProps) => {
             ))}
           </ul>
         </div>
-        <div className=" flex justify-center text-center mt-8">
-          <NavLink className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border" to="/contact">
+        <div className=" flex justify-evenly items-center text-center mt-8 mb-2">
+          <span className="hover:cursor-pointer hover:underline" onClick={props.handleClick}>Back</span>
+          <NavLink className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border font-thin " to="/contact">
             Enquire
           </NavLink>
         </div>
@@ -181,7 +182,7 @@ export default function Products() {
             <li
               key={index}
               onClick={() => handleClick(element)}
-              className="text-center border-2 shadow-lg border-transparent w-4/5 p-7 hover:cursor-pointer hover:rounded-md hover:border-indigo-200 hover:border-current"
+              className="text-center border-2 shadow-[1px_2px_3px_2px_rgba(12,12,12,0.2)] rounded-md border-transparent w-4/5 p-7 hover:cursor-pointer hover:rounded-md hover:border-indigo-200 hover:border-current"
             >
               <img
                 alt="alt"

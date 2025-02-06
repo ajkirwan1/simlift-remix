@@ -14,12 +14,35 @@ import liftM from "/public/products/Simlift_M_small.jpg";
 import liftFlap from "/public/products/SimliftS_FLAP_small.jpg";
 import liftKlap from "/public/products/Simlift_S_z_klapą_small.jpg";
 import liftXL from "/public/products/SIMLIFT_XL_PRO_small.jpg";
+import { motion } from "motion/react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { register } from "swiper/element/bundle";
 import "swiper/css";
 import "swiper/css/navigation";
-// s
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 2.5,
+      delayChildren: 0.1,
+      staggerChildren: 0.7,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: "easeIn",
+    },
+  },
+};
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -40,11 +63,19 @@ export default function Index() {
             alt=""
             className="object-cover w-full h-screen"
           />
-          <div className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center">
+          <motion.div
+            className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+          >
             <h1 className="text-4xl mb-32">Ceiling mounted projector lifts</h1>
             <p className="mb-8">Our aim is to deliver top-quality products</p>
-            <p className="mb-8 max-w-7xl">From the beginning, and through the evaluation process, we make sure the quality is outstanding</p>
-          </div>
+            <p className="mb-8 max-w-7xl">
+              From the beginning, and through the evaluation process, we make
+              sure the quality is outstanding
+            </p>
+          </motion.div>
         </div>
         <section className="relative w-full h-screen snap-center ">
           <img
@@ -52,24 +83,52 @@ export default function Index() {
             alt=""
             className="object-cover w-full h-screen"
           />
-          <div className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center">
+          <motion.div
+            className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+          >
             <h1 className="text-4xl mb-8">HIGH QUALITY PRODUCTS</h1>
-            <p>Simlift became the no.1 producer of ceiling mounted projector lifts in Poland</p>
-          </div>
-          <div className="flex absolute justify-around w-full top-1/2">
-            <div className="flex flex-col border border-solid rounded-lg shadow-2xl text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center justify-center">
+            <p>
+              Simlift became the no.1 producer of ceiling mounted projector
+              lifts in Poland
+            </p>
+          </motion.div>
+          <motion.div
+            className="flex absolute justify-around w-full top-1/2"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+          >
+            <motion.div
+              className="flex flex-col border border-solid rounded-lg shadow-2xl
+            text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer"
+              variants={item}
+            >
               <img alt="" src={process} className="h-14 w-auto"></img>
               <p className="text-black text-2xl mb-2">Some text</p>
-            </div>
-            <div className="flex flex-col border border-solid rounded-lg shadow-2xl text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center justify-center">
+            </motion.div>
+            <motion.div
+              className="flex flex-col border border-solid rounded-lg shadow-2xl
+            text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer"
+              variants={item}
+            >
               <img alt="" src={testpassed} className="h-14 w-auto"></img>
               <p className="text-black text-2xl mb-2">Some text</p>
-            </div>
-            <div className="flex flex-col border border-solid rounded-lg shadow-2xl text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center justify-center">
+            </motion.div>
+            <motion.div
+              className="flex flex-col border border-solid rounded-lg shadow-2xl
+            text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer"
+              variants={item}
+            >
               <img alt="" src={guarantee} className="h-14 w-auto"></img>
               <p className="text-black text-2xl mb-2">Some text</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </section>
         <section className="relative w-full h-screen snap-center">
           <div className="h-20v bg-sky-950" />

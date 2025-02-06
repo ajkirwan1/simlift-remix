@@ -19,8 +19,8 @@ export default function Contact() {
           alt=""
           className="object-cover w-full h-full opacity-80"
         />
-        <div className="flex absolute top-1/4 right-32 w-4/5 h-60v">
-          <div className="basis-3/6 text-amber-50">
+        <div className="flex absolute top-1/4 right-32 w-4/5 h-60v ">
+          <div className="basis-2/6 text-amber-50">
             <div className="m-auto w-4/5 h-full text-center">
               <h3 className="text-5xl mt-20">Contact us</h3>
               <div className="mt-10">
@@ -30,25 +30,29 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className=" basis-3/6">
+          <div className=" basis-4/6">
             <span className="text-white text-2xl">Enquire now</span>
             <Form
               method="post"
-              className="grid grid-rows-[10vh_10vh_10vh_10vh] grid-cols-[50%_50%] h-fit bg-white p-6 rounded-md mt-2"
+              className="grid grid-rows-auto grid-cols-[50%_50%] h-fit bg-white p-6 rounded-md mt-2"
             >
-              <p className="col-start-1 col-end-2 h-full w-5/6">
+              <p className="col-start-1 col-end-2 row-start-1 h-full w-5/6">
                 <label className="flex flex-col">
                   Email Address:
                   <input
-                    type="email"
+                    type="string"
                     name="email"
                     placeholder="Mr blogs"
                     // value="ajkirwan1@gmail.com"
                     className="border border-solid rounded-md border-sky-900 basis-full p-2 mt-2"
                   ></input>
                 </label>
-                {actionData?.email ? <span>{actionData.email}</span> : null}
               </p>
+              {actionData?.email ? (
+                <span className="col-start-1 col-end-2 row-start-2 h-full w-5/6">
+                  {actionData.email}
+                </span>
+              ) : null}
               <p className="col-start-1 col-end-2 h-full w-5/6">
                 <label className="flex flex-col">
                   Name:
@@ -60,8 +64,12 @@ export default function Contact() {
                     className="border border-solid rounded-md border-sky-900 basis-full p-2  mt-2"
                   ></input>
                 </label>
-                {actionData?.name ? <span>{actionData.name}</span> : null}
               </p>
+              {actionData?.name ? (
+                <span className="col-start-1 col-end-2 row-start-4">
+                  {actionData.name}
+                </span>
+              ) : null}
               <p className="col-start-1 col-end-2 h-full w-5/6">
                 <label className="flex flex-col">
                   Contact number
@@ -73,8 +81,12 @@ export default function Contact() {
                     className="border border-solid rounded-md border-sky-900 basis-full p-2  mt-2"
                   ></input>
                 </label>
-                {actionData?.phone ? <span>{actionData.phone}</span> : null}
               </p>
+              {actionData?.phone ? (
+                <span className="col-start-1 col-end-2 h-full w-5/6">
+                  {actionData.phone}
+                </span>
+              ) : null}
               <p className="row-start-1 row-end-4 col-start-2 h-full">
                 <label className="flex flex-col h-full">
                   Message
@@ -86,14 +98,20 @@ export default function Contact() {
                     // value="ajkirwan1@gmail.com"
                   ></textarea>
                 </label>
-                {actionData?.message ? <span>{actionData.message}</span> : null}
               </p>
-              <button
-                type="submit"
-                className="border border-solid w-32 h-10 m-auto rounded-md bg-sky-900 text-white text-sm font-light hover:bg-sky-800"
-              >
-                Submit
-              </button>
+              {actionData?.message ? (
+                <span className="col-start-2 col-end-3 row-start-4">
+                  {actionData.message}
+                </span>
+              ) : null}
+              <div className="flex col-span-full m-auto h-16">
+                <button
+                  type="submit"
+                  className="border border-solid w-32 h-10 m-auto rounded-md bg-sky-900 text-white text-sm font-light hover:bg-sky-800"
+                >
+                  Submit
+                </button>
+              </div>
             </Form>
           </div>
         </div>
@@ -115,7 +133,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const validateResult = contactFormSchema.safeParse({
     name: name,
     email: email,
-    tel: tel,
+    phone: tel,
     message: message,
   });
 
