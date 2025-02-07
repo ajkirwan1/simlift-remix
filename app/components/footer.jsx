@@ -2,7 +2,7 @@
 
 export default function Footer() {
     return (
-      <footer className="flex justify-between items-center h-15v bg-sky-950  text-white border-t border-t-orange-900">
+      <footer className="flex justify-between items-center h-15v bg-gradient-to-r from-simlift-left to-simlift-right  text-white border-t border-t-orange-900">
         <p className="ml-5">Developed by</p>
         <p>Privacy Policy</p>
         <div>

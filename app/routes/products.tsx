@@ -140,7 +140,7 @@ const Modal = (props: ModalProps) => {
         </div>
         <div className=" flex justify-evenly items-center text-center mt-8 mb-2">
           <span className="hover:cursor-pointer hover:underline" onClick={props.handleClick}>Back</span>
-          <NavLink className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border font-thin " to="/contact">
+          <NavLink className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border font-thin hover:bg-sky-800" to="/contact">
             Enquire
           </NavLink>
         </div>
@@ -169,7 +169,7 @@ export default function Products() {
       {backdropOpen && (
         <Modal handleClick={handleClick} chosenItem={chosenItem}></Modal>
       )}
-      <div className="bg-sky-950">
+      <div className="bg-linear-to-r from-cyan-500 to-blue-500">
         <Header />
       </div>
       <div className="ml-8 mt-8">

@@ -5,7 +5,12 @@ import type { Config } from "tailwindcss";
 export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
+
     extend: {
+      colors: {
+        "simlift-left": '#083a51',
+        "simlift-right": '#115978f7',
+      },
       height: {
         "10v": "10vh",
         "15v": "15vh",

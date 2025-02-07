@@ -4,11 +4,11 @@ import Header from "~/components/header";
 export default function About() {
   return (
     <>
-      <div className="min-h-85vh">
+      <div className="flex flex-col min-h-85vh">
         <div className="bg-sky-950">
           <Header />
         </div>
-        <div>
+        <div className="flex flex-col flex-1 text-center justify-center gap-4">
           <p>
             Simlift is the successor to the well-known and renowned brand of
             Avers Screen projector lifts.

@@ -9,7 +9,7 @@ export default function Contact() {
   const actionData = useActionData<typeof action>();
 
   return (
-    <div className="bg-sky-950 h-85v">
+    <div className="h-85v">
       <div className="fixed top-0 w-full z-10 border-b-1">
         <HeaderHero />
       </div>
@@ -49,11 +49,11 @@ export default function Contact() {
                 </label>
               </p>
               {actionData?.email ? (
-                <span className="col-start-1 col-end-2 row-start-2 h-full w-5/6">
+                <span className="col-start-1 col-end-2 row-start-2 h-full w-5/6 text-orange-700">
                   {actionData.email}
                 </span>
               ) : null}
-              <p className="col-start-1 col-end-2 h-full w-5/6">
+              <p className="col-start-1 col-end-2 h-full w-5/6 ">
                 <label className="flex flex-col">
                   Name:
                   <input
@@ -66,7 +66,7 @@ export default function Contact() {
                 </label>
               </p>
               {actionData?.name ? (
-                <span className="col-start-1 col-end-2 row-start-4">
+                <span className="col-start-1 col-end-2 row-start-4  text-orange-700">
                   {actionData.name}
                 </span>
               ) : null}
@@ -83,7 +83,7 @@ export default function Contact() {
                 </label>
               </p>
               {actionData?.phone ? (
-                <span className="col-start-1 col-end-2 h-full w-5/6">
+                <span className="col-start-1 col-end-2 h-full w-5/6  text-orange-700">
                   {actionData.phone}
                 </span>
               ) : null}
@@ -100,7 +100,7 @@ export default function Contact() {
                 </label>
               </p>
               {actionData?.message ? (
-                <span className="col-start-2 col-end-3 row-start-4">
+                <span className="col-start-2 col-end-3 row-start-4  text-orange-700">
                   {actionData.message}
                 </span>
               ) : null}

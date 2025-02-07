@@ -42,7 +42,7 @@ const container = {
     transition: {
       duration: 2,
       // delayChildren: 0.1,
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -174,7 +174,7 @@ export default function Index() {
           </motion.div>
         </section>
         <section className="relative w-full h-screen snap-center">
-          <div className="h-20v bg-sky-950" />
+          <div className="h-20v bg-gradient-to-r from-simlift-left to-simlift-right" />
           <div className="block content-center h-65v">
             <Swiper
               className="h-4/6"
