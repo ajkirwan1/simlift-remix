@@ -24,6 +24,9 @@ export default {
       borderWidth: {
           "1px": "1"
       },
+      minHeight: {
+        "85vh": "85vh"
+    },
       fontFamily: {
         sans: [
           "Inter",

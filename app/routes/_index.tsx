@@ -2,7 +2,7 @@
 
 import type { MetaFunction } from "@remix-run/node";
 import { useState } from "react";
-import heroImage from "/public/1picture.jpg";
+import heroImage from "/public/ceiling.jpg";
 import glassesImage from "/public/glasses.jpg";
 import HeaderHero from "~/components/header-hero";
 import Footer from "~/components/footer";
@@ -23,25 +23,38 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
+const containerTop = {
+  hidden: { opacity: 0, x:-20 },
+  show: {
+    opacity: 1,
+    x:0,
+    transition: {
+       ease: "easeOut",
+      duration: 1.6
+    },
+  },
+};
+
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      duration: 2.5,
-      delayChildren: 0.1,
-      staggerChildren: 0.7,
+      duration: 2,
+      // delayChildren: 0.1,
+      staggerChildren: 0.1,
     },
   },
 };
 
 const item = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, y:20 },
   show: {
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 0.7,
-      ease: "easeIn",
+      duration: 1.2,
+      ease: "easeOut",
     },
   },
 };
@@ -112,7 +125,7 @@ export default function Index() {
           />
           <motion.div
             className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center"
-            variants={container}
+            variants={containerTop}
             initial="hidden"
             whileInView="show"
           >
@@ -164,7 +177,7 @@ export default function Index() {
           <div className="h-20v bg-sky-950" />
           <div className="block content-center h-65v">
             <Swiper
-              className="h-3/6"
+              className="h-4/6"
               modules={[Navigation, Autoplay]}
               slidesPerView={1}
               navigation
