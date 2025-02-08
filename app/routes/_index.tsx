@@ -99,7 +99,7 @@ export default function Index() {
             className="object-cover w-full h-screen"
           />
           <motion.div
-            className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center"
+            className="absolute flex flex-col items-center w-full top-1/4 text-white text-center"
             variants={container}
             initial="hidden"
             whileInView="show"
@@ -144,7 +144,7 @@ export default function Index() {
             <motion.div
               className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-1/5 h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center"
+            justify-center hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center"
               variants={item}
               onClick={() => handleModal(0)}
             >
@@ -181,13 +181,13 @@ export default function Index() {
               modules={[Navigation, Autoplay]}
               slidesPerView={1}
               navigation
-              autoplay
+              // autoplay
               loop={true}
             >
               <SwiperSlide>
-                <div className="flex h-full justify-center content-center">
+                <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
                   <img src={liftS} alt=""></img>
-                  <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
+                  <div className="flex flex-col items-center justify-evenly basis-1/4">
                     <h2 className="text-3xl">SIMLIFT S</h2>
                     <p>
                       Electric projector lift recommended for small size
@@ -199,7 +199,7 @@ export default function Index() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
-                <div className="flex h-full justify-center content-center">
+              <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
                   <img src={liftM} alt=""></img>
                   <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
                     <h2 className="text-3xl">SIMLIFT S</h2>
@@ -213,7 +213,7 @@ export default function Index() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
-                <div className="flex h-full justify-center content-center">
+              <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
                   <img src={liftFlap} alt=""></img>
                   <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
                     <h2 className="text-3xl">SIMLIFT S</h2>
@@ -227,7 +227,7 @@ export default function Index() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
-                <div className="flex h-full justify-center content-center">
+              <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
                   <img src={liftKlap} alt=""></img>
                   <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
                     <h2 className="text-3xl">SIMLIFT S</h2>
@@ -241,7 +241,7 @@ export default function Index() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
-                <div className="flex h-full justify-center content-center">
+              <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
                   <img src={liftXL} alt=""></img>
                   <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
                     <h2 className="text-3xl">SIMLIFT S</h2>

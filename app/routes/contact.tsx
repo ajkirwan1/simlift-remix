@@ -44,7 +44,7 @@ export default function Contact() {
                     name="email"
                     placeholder="Mr blogs"
                     // value="ajkirwan1@gmail.com"
-                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mt-2"
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2  mb-2 mt-0"
                   ></input>
                 </label>
               </p>
@@ -61,7 +61,7 @@ export default function Contact() {
                     name="name"
                     placeholder="Mr blogs"
                     // value="ajkirwan1@gmail.com"
-                    className="border border-solid rounded-md border-sky-900 basis-full p-2  mt-2"
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
                   ></input>
                 </label>
               </p>
@@ -78,7 +78,7 @@ export default function Contact() {
                     name="tel"
                     placeholder="+447095519529"
                     // value="ajkirwan1@gmail.com"
-                    className="border border-solid rounded-md border-sky-900 basis-full p-2  mt-2"
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
                   ></input>
                 </label>
               </p>
@@ -88,13 +88,13 @@ export default function Contact() {
                 </span>
               ) : null}
               <p className="row-start-1 row-end-4 col-start-2 h-full">
-                <label className="flex flex-col h-full">
+                <label className="flex flex-col h-full ">
                   Message
                   <textarea
                     name="message"
                     placeholder="I would like to enquire about..."
                     rows={5}
-                    className="border border-solid rounded-md border-sky-900 basis-full p-2  mt-2"
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
                     // value="ajkirwan1@gmail.com"
                   ></textarea>
                 </label>

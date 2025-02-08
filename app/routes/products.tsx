@@ -86,7 +86,7 @@ const productList = [
     ],
   },
   {
-    url: "/public/products/SIMLIFT_XL_PRO_small.jpg",
+    url: "/products/SIMLIFT_XL_PRO_small.jpg",
     name: "Simlift XL PRO",
     features: [
       "Operating range up to 850 mm",
