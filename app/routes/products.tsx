@@ -9,7 +9,7 @@ import { NavLink } from "@remix-run/react";
 
 const productList = [
   {
-    url: "/public/products/SIMLIFT_S_small.jpg",
+    url: "/products/SIMLIFT_S_small.jpg",
     name: "Simlift S small",
     features: [
       "Operating range up to 850 mm",
@@ -29,7 +29,7 @@ const productList = [
     pdf: "",
   },
   {
-    url: "/public/products/Simlift_M_small.jpg",
+    url: "/products/Simlift_M_small.jpg",
     name: "Simlift M small",
     features: [
       "Operating range up to 850 mm",
@@ -48,7 +48,7 @@ const productList = [
     ],
   },
   {
-    url: "/public/products/SimliftS_FLAP_small.jpg",
+    url: "/products/SimliftS_FLAP_small.jpg",
     name: "Simlift Flap",
     features: [
       "Operating range up to 850 mm",
@@ -67,7 +67,7 @@ const productList = [
     ],
   },
   {
-    url: "/public/products/Simlift_S_z_klapą_small.jpg",
+    url: "/products/Simlift_S_z_klapą_small.jpg",
     name: "Simlift Klapa",
     features: [
       "Operating range up to 850 mm",
