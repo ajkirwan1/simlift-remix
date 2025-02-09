@@ -27,7 +27,7 @@ export default function Modal({ handleModal, chosenItem }) {
       variants={modal}
       initial="hidden"
       animate="show"
-      className="absolute z-20 h-full w-screen bg-black bg-opacity-80 flex justify-center items-center"
+      className="absolute z-20 w-full h-full  bg-black bg-opacity-80 flex justify-center items-center"
       onClick={handleModal}
     >
       <div className="flex items-center text-center w-2/4 h-1/3 border border-orange-900 rounded-2xl shadow-lg bg-white text-black p-2">

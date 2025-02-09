@@ -161,6 +161,7 @@ export default function Products() {
       document.body.style.overflow = "unset";
     } else {
       document.body.style.overflow = "hidden";
+      document.body.style.height = "100px"
     }
   };
 

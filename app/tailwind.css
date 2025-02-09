@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    font-family: 'Nunito Sans Variable', sans-serif;
+  }
+}
 
 @layer components {
   html,
   body {
+
     @apply bg-white dark:bg-gray-950;
-    /* @apply w-screen; */
+
   
     @media (prefers-color-scheme: dark) {
       color-scheme: dark;

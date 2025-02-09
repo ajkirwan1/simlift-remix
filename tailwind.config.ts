@@ -31,19 +31,22 @@ export default {
       },
       minHeight: {
         "85vh": "85vh"
-    },
-      fontFamily: {
-        sans: [
-          "Inter",
-          "ui-sans-serif",
-          "system-ui",
-          "sans-serif",
-          "Apple Color Emoji",
-          "Segoe UI Emoji",
-          "Segoe UI Symbol",
-          "Noto Color Emoji",
-        ],
       },
+      marginTop: {
+        "10v": "10vh"
+      }
+      // fontFamily: {
+      //   sans: [
+      //     "Inter",
+      //     "ui-sans-serif",
+      //     "system-ui",
+      //     "sans-serif",
+      //     "Apple Color Emoji",
+      //     "Segoe UI Emoji",
+      //     "Segoe UI Symbol",
+      //     "Noto Color Emoji",
+      //   ],
+      // },
     },
   },
   plugins: [],

@@ -24,13 +24,25 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const containerTop = {
-  hidden: { opacity: 0, x:-20 },
+  hidden: { opacity: 0, x: -20 },
   show: {
     opacity: 1,
-    x:0,
+    x: 0,
     transition: {
-       ease: "easeOut",
-      duration: 1.6
+      ease: "easeOut",
+      duration: 1.6,
+    },
+  },
+};
+
+const itemTop = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+      ease: "easeOut",
     },
   },
 };
@@ -48,7 +60,7 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y:20 },
+  hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
     y: 0,
@@ -62,7 +74,7 @@ const item = {
 const modalData = [
   "Simlift’s ceiling-mounted projectors are crafted with precision engineering, designed to deliver flawless performance in any environment. Our cutting-edge technology ensures a seamless, stable, and precise viewing experience, setting a new standard for projection solutions.",
   "We take quality assurance seriously. Each Simlift projector undergoes rigorous testing to ensure reliability, durability, and consistent performance. Our commitment to excellence means you can trust every installation for years to come.",
-  "With over 20 years of manufacturing experience, Simlift has perfected the art of ceiling-mounted projectors. Our long-standing expertise guarantees that every product is built to the highest standards, ensuring both innovation and reliability in every unit."
+  "With over 20 years of manufacturing experience, Simlift has perfected the art of ceiling-mounted projectors. Our long-standing expertise guarantees that every product is built to the highest standards, ensuring both innovation and reliability in every unit.",
 ];
 
 export const meta: MetaFunction = () => {
@@ -80,9 +92,11 @@ export default function Index() {
     setChosenItem(modalData[index]);
     setBackdropOpen((val) => !val);
     if (backdropOpen) {
-      document.body.style.overflow = "unset";
+      document.getElementById("modal-overflow").style.overflow = "auto"
+    
     } else {
-      document.body.style.overflow = "hidden";
+      document.getElementById("modal-overflow").style.overflow = "hidden"
+
     }
   };
 
@@ -91,7 +105,7 @@ export default function Index() {
       <div className="fixed top-0 w-full z-10 border-b-1">
         <HeaderHero />
       </div>
-      <div className="snap-y snap-mandatory overflow-y-scroll h-screen">
+      <div id="modal-overflow" className="snap-y snap-mandatory overflow-y-scroll h-screen">
         <div className="relative w-full h-screen snap-center snap-always">
           <img
             src={heroImage}
@@ -99,23 +113,27 @@ export default function Index() {
             className="object-cover w-full h-screen"
           />
           <motion.div
-            className="absolute flex flex-col items-center w-full top-1/4 text-white text-center"
+            className="absolute flex flex-col items-center w-full top-[30vh] text-white text-center"
             variants={container}
             initial="hidden"
             whileInView="show"
           >
-            <h1 className="text-4xl mb-32">Ceiling mounted projector lifts</h1>
-            <p className="mb-8">Our aim is to deliver top-quality products</p>
-            <p className="mb-8 max-w-7xl">
-              From the beginning, and through the evaluation process, we make
-              sure the quality is outstanding
-            </p>
+            <div className="flex flex-col gap-[10vh]">
+              <motion.h1 className="text-4xl" variants={itemTop}>
+                Ceiling mounted projector lifts
+              </motion.h1>
+              <motion.p className="text-lg" variants={itemTop}>Our aim is to deliver top-quality products</motion.p>
+              <motion.p className="text-lg max-w-7xl" variants={itemTop}>
+                From the beginning, and through the evaluation process, we make
+                sure the quality is outstanding
+              </motion.p>
+            </div>
           </motion.div>
         </div>
-        <section className="relative w-full h-screen snap-center ">
+        <section className="relative w-full h-screen snap-center">
           {backdropOpen && (
             <div>
-              <Modal handleModal={handleModal} chosenItem={chosenItem}/>
+              <Modal handleModal={handleModal} chosenItem={chosenItem} />
             </div>
           )}
           <img
@@ -169,7 +187,9 @@ export default function Index() {
               onClick={() => handleModal(2)}
             >
               <img alt="" src={guarantee} className="h-14 w-auto"></img>
-              <p className="text-black text-2xl mb-2">20 years of manufacturing</p>
+              <p className="text-black text-2xl mb-2">
+                20 years of manufacturing
+              </p>
             </motion.div>
           </motion.div>
         </section>
@@ -181,7 +201,7 @@ export default function Index() {
               modules={[Navigation, Autoplay]}
               slidesPerView={1}
               navigation
-              // autoplay
+              autoplay
               loop={true}
             >
               <SwiperSlide>
@@ -199,7 +219,7 @@ export default function Index() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
-              <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
+                <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
                   <img src={liftM} alt=""></img>
                   <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
                     <h2 className="text-3xl">SIMLIFT S</h2>
@@ -213,7 +233,7 @@ export default function Index() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
-              <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
+                <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
                   <img src={liftFlap} alt=""></img>
                   <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
                     <h2 className="text-3xl">SIMLIFT S</h2>
@@ -227,7 +247,7 @@ export default function Index() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
-              <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
+                <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
                   <img src={liftKlap} alt=""></img>
                   <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
                     <h2 className="text-3xl">SIMLIFT S</h2>
@@ -241,7 +261,7 @@ export default function Index() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="flex align-middle justify-center">
-              <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
+                <div className="flex h-full justify-center content-center gap-28 text-center leading-8">
                   <img src={liftXL} alt=""></img>
                   <div className="flex flex-col items-center justify-evenly basis-1/4 ml-10">
                     <h2 className="text-3xl">SIMLIFT S</h2>
