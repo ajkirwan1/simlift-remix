@@ -201,7 +201,7 @@ export default function Index() {
               modules={[Navigation, Autoplay]}
               slidesPerView={1}
               navigation
-              // autoplay
+              autoplay
               loop={true}
             >
               <SwiperSlide>
