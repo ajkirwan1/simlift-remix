@@ -9,8 +9,8 @@ import Footer from "~/components/footer";
 import Modal from "~/components/modal";
 import { Navigation, Autoplay } from "swiper/modules";
 import guarantee from "/public/blackguarantee.png";
-import process from "/public/process.png";
-import testpassed from "/public/testpassed.png";
+import process from "/public/precisionenginnering.png";
+import testpassed from "/public/qualityassurance.png";
 import liftS from "/public/products/SIMLIFT_S_small.jpg";
 import liftM from "/public/products/Simlift_M_small.jpg";
 import liftFlap from "/public/products/SimliftS_FLAP_small.jpg";
@@ -23,14 +23,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const containerTop = {
+const container = {
   hidden: { opacity: 0, x: -20 },
   show: {
     opacity: 1,
     x: 0,
     transition: {
       ease: "easeOut",
-      duration: 1.6,
+      duration: 3,
     },
   },
 };
@@ -47,7 +47,7 @@ const itemTop = {
   },
 };
 
-const container = {
+const containerTop = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -59,11 +59,22 @@ const container = {
   },
 };
 
-const item = {
-  hidden: { opacity: 0, y: 20 },
+const containerSection2 = {
+  hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    y: 0,
+    transition: {
+      duration: 2,
+      // delayChildren: 0.1,
+      staggerChildren: 0.8,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
     transition: {
       duration: 1.2,
       ease: "easeOut",
@@ -113,8 +124,8 @@ export default function Index() {
             className="object-cover w-full h-screen"
           />
           <motion.div
-            className="absolute flex flex-col items-center w-full top-[30vh] text-white text-center"
-            variants={container}
+            className="absolute flex flex-col items-center w-full top-[30vh] text-white text-center font-thin"
+            variants={containerTop}
             initial="hidden"
             whileInView="show"
           >
@@ -122,8 +133,8 @@ export default function Index() {
               <motion.h1 className="text-4xl" variants={itemTop}>
                 Ceiling mounted projector lifts
               </motion.h1>
-              <motion.p className="text-lg" variants={itemTop}>Our aim is to deliver top-quality products</motion.p>
-              <motion.p className="text-lg max-w-7xl" variants={itemTop}>
+              <motion.p className="text-2xl" variants={itemTop}>Our aim is to deliver top-quality products</motion.p>
+              <motion.p className="text-2xl max-w-7xl" variants={itemTop}>
                 From the beginning, and through the evaluation process, we make
                 sure the quality is outstanding
               </motion.p>
@@ -142,20 +153,20 @@ export default function Index() {
             className="object-cover w-full h-screen"
           />
           <motion.div
-            className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center"
-            variants={containerTop}
+            className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center font-thin"
+            variants={container}
             initial="hidden"
             whileInView="show"
           >
             <h1 className="text-4xl mb-8">HIGH QUALITY PRODUCTS</h1>
-            <p>
+            <p className="text-2xl">
               Simlift became the no.1 producer of ceiling mounted projector
               lifts in Poland
             </p>
           </motion.div>
           <motion.div
-            className="flex absolute justify-around w-full top-1/2"
-            variants={container}
+            className="flex absolute justify-around w-full top-1/2 font-thin"
+            variants={containerSection2}
             initial="hidden"
             whileInView="show"
           >
@@ -166,8 +177,8 @@ export default function Index() {
               variants={item}
               onClick={() => handleModal(0)}
             >
-              <img alt="" src={process} className="h-14 w-auto"></img>
-              <p className="text-black text-2xl mb-2">Precision engineering</p>
+              <img alt="" src={process} className="h-10 w-auto"></img>
+              <p className="text-black text-lg mb-2 mt-[1vh]">Precision engineering</p>
             </motion.div>
             <motion.div
               className="flex flex-col border border-solid rounded-lg shadow-2xl
@@ -176,8 +187,8 @@ export default function Index() {
               variants={item}
               onClick={() => handleModal(1)}
             >
-              <img alt="" src={testpassed} className="h-14 w-auto"></img>
-              <p className="text-black text-2xl mb-2">Quality assurance</p>
+              <img alt="" src={testpassed} className="h-10 w-auto"></img>
+              <p className="text-black text-lg mb-2 mt-[1vh]">Quality assurance</p>
             </motion.div>
             <motion.div
               className="flex flex-col border border-solid rounded-lg shadow-2xl
@@ -186,8 +197,8 @@ export default function Index() {
               variants={item}
               onClick={() => handleModal(2)}
             >
-              <img alt="" src={guarantee} className="h-14 w-auto"></img>
-              <p className="text-black text-2xl mb-2">
+              <img alt="" src={guarantee} className="h-10 w-auto"></img>
+              <p  className="text-black text-lg mb-2 mt-[1vh]">
                 20 years of manufacturing
               </p>
             </motion.div>
