@@ -24,13 +24,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const container = {
-  hidden: { opacity: 0, x: -20 },
+  hidden: { opacity: 0, },
   show: {
     opacity: 1,
-    x: 0,
     transition: {
       ease: "easeOut",
-      duration: 3,
+      duration: 2.5,
     },
   },
 };
@@ -124,7 +123,7 @@ export default function Index() {
             className="object-cover w-full h-screen"
           />
           <motion.div
-            className="absolute flex flex-col items-center w-full top-[30vh] text-white text-center font-thin"
+            className="absolute flex flex-col items-center w-full top-[30vh] text-white text-center "
             variants={containerTop}
             initial="hidden"
             whileInView="show"
@@ -133,8 +132,8 @@ export default function Index() {
               <motion.h1 className="text-4xl" variants={itemTop}>
                 Ceiling mounted projector lifts
               </motion.h1>
-              <motion.p className="text-2xl" variants={itemTop}>Our aim is to deliver top-quality products</motion.p>
-              <motion.p className="text-2xl max-w-7xl" variants={itemTop}>
+              <motion.p className="text-2xl font-thin" variants={itemTop}>Our aim is to deliver top-quality products</motion.p>
+              <motion.p className="text-2xl max-w-7xl font-thin" variants={itemTop}>
                 From the beginning, and through the evaluation process, we make
                 sure the quality is outstanding
               </motion.p>
@@ -153,13 +152,13 @@ export default function Index() {
             className="object-cover w-full h-screen"
           />
           <motion.div
-            className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center font-thin"
+            className="absolute flex flex-col items-center w-full  top-1/4  text-white text-center"
             variants={container}
             initial="hidden"
             whileInView="show"
           >
             <h1 className="text-4xl mb-8">HIGH QUALITY PRODUCTS</h1>
-            <p className="text-2xl">
+            <p className="text-2xl font-thin">
               Simlift became the no.1 producer of ceiling mounted projector
               lifts in Poland
             </p>
