@@ -17,7 +17,7 @@ export default function Contact() {
         <img
           src={glassesImage}
           alt=""
-          className="object-cover w-full h-full opacity-80"
+          className="object-cover w-full h-full"
         />
         <div className="flex absolute top-1/4 right-32 w-4/5 h-60v ">
           <div className="basis-2/6 text-amber-50">
