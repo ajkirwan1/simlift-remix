@@ -128,12 +128,12 @@ export default function Index() {
             initial="hidden"
             whileInView="show"
           >
-            <div className="flex flex-col gap-[10vh]">
-              <motion.h1 className="text-4xl" variants={itemTop}>
+            <div className="flex flex-col gap-[10vh] items-center">
+              <motion.h1 className="text-2xl md:text-4xl w-3/4 text-center" variants={itemTop}>
                 Ceiling mounted projector lifts
               </motion.h1>
-              <motion.p className="text-2xl font-thin" variants={itemTop}>Our aim is to deliver top-quality products</motion.p>
-              <motion.p className="text-2xl max-w-7xl font-thin" variants={itemTop}>
+              <motion.p className="text-lg md:text-2xl w-3/4 font-thin" variants={itemTop}>Our aim is to deliver top-quality products</motion.p>
+              <motion.p className="text-lg md:text-2xl w-3/4 max-w-7xl font-thin" variants={itemTop}>
                 From the beginning, and through the evaluation process, we make
                 sure the quality is outstanding
               </motion.p>
