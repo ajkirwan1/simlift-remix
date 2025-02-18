@@ -6,7 +6,7 @@
 import type { MetaFunction } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react";
 import { useState } from "react";
-import heroImage from "/public/ceiling.jpg";
+import heroImage from "/public/projector.jpg";
 import glassesImage from "/public/glasses.jpg";
 import HeaderHero from "~/components/header-hero";
 import Footer from "~/components/footer";
