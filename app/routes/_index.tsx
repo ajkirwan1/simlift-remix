@@ -189,7 +189,7 @@ export default function Index() {
               <motion.div
                 className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3"
+            justify-center hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(0)}
               >
@@ -201,7 +201,7 @@ export default function Index() {
               <motion.div
                 className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3"
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(1)}
               >
@@ -217,7 +217,7 @@ export default function Index() {
               <motion.div
                 className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center"
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(2)}
               >
@@ -242,14 +242,14 @@ export default function Index() {
                 modules={[Navigation, Autoplay]}
                 slidesPerView={1}
                 navigation
-                // autoplay
+                autoplay
                 loop={true}
               >
                 {data.map((item, index) => (
                   <SwiperSlide key={index}>
                     <div className="flex flex-col sm:flex-row h-full justify-center content-center sm:gap-28 text-center sm:leading-8">
                       <img
-                        className="w-2/5 sm:w-1/6 h-auto ml-[50%] -translate-x-1/2"
+                        className="w-2/5 sm:w-1/6 h-auto ml-[50%] sm:ml-0 -translate-x-1/2 sm:-translate-x-0"
                         src={item.fields.image!.fields.file.url}
                         alt=""
                       ></img>
