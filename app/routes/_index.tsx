@@ -162,7 +162,7 @@ export default function Index() {
             alt=""
             className="object-cover w-full h-screen"
           />
-          <div className="absolute flex flex-col w-2/3 top-1/4 sm:top-2/4 left-2/4 -translate-x-1/2 sm:-translate-y-1/2">
+          <div className="absolute flex flex-col w-4/5 top-1/4 sm:top-2/4 left-2/4 -translate-x-1/2 sm:-translate-y-1/2">
             <motion.div
               className="flex flex-col items-center w-full text-white text-center mb-4"
               variants={container}
