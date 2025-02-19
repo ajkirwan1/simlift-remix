@@ -28,7 +28,7 @@ export default function Header() {
         <img alt="" src={logo} className="ml-8 h-[40%]" />
       </NavLink>
       <div className="max-sm:hidden w-1/3 mr-8">
-        <ul className="flex mr-8 w-1/3 justify-around list-none">
+        <ul className="flex w-full justify-around list-none">
           <li className="text-xl hover:underline decoration-1">
             <NavLink to="/about">About</NavLink>
           </li>
