@@ -13,14 +13,14 @@ export default function Contact() {
       <div className="fixed top-0 w-full z-10 border-b-1">
         <HeaderHero />
       </div>
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full ">
         <img
           src={glassesImage}
           alt=""
           className="object-cover w-full h-full"
         />
-        <div className="flex absolute top-1/4 right-32 w-4/5 h-60v ">
-          <div className="basis-2/6 text-amber-50">
+        <div className="flex flex-col-reverse sm:flex-row absolute top-1/4 sm:top-1/4 sm:right-32 w-screen sm:w-4/5 ">
+          <div className="hidden sm:block basis-2/6 text-amber-50">
             <div className="m-auto w-4/5 h-full text-center">
               <h3 className="text-5xl mt-20">Contact us</h3>
               <div className="mt-10">
@@ -30,13 +30,13 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className=" basis-4/6">
+          <div className="m-3 sm:m-0 basis-4/6">
             <span className="text-white text-2xl">Enquire now</span>
             <Form
               method="post"
-              className="grid grid-rows-auto grid-cols-[50%_50%] h-fit bg-white p-6 rounded-md mt-2"
+              className="sm:grid sm:grid-rows-auto sm:grid-cols-[50%_50%] h-fit bg-white p-6 rounded-md mt-2"
             >
-              <p className="col-start-1 col-end-2 row-start-1 h-full w-5/6">
+              <p className="col-start-1 col-end-2 row-start-1 h-full sm:w-5/6">
                 <label className="flex flex-col">
                   Email Address:
                   <input
@@ -53,7 +53,7 @@ export default function Contact() {
                   {actionData.email}
                 </span>
               ) : null}
-              <p className="col-start-1 col-end-2 h-full w-5/6 ">
+              <p className="col-start-1 col-end-2 h-full sm:w-5/6 ">
                 <label className="flex flex-col">
                   Name:
                   <input
@@ -70,7 +70,7 @@ export default function Contact() {
                   {actionData.name}
                 </span>
               ) : null}
-              <p className="col-start-1 col-end-2 h-full w-5/6">
+              <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
                   Contact number
                   <input
@@ -93,9 +93,8 @@ export default function Contact() {
                   <textarea
                     name="message"
                     placeholder="I would like to enquire about..."
-                    rows={5}
+                    // rows={5}
                     className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
-                    // value="ajkirwan1@gmail.com"
                   ></textarea>
                 </label>
               </p>
@@ -152,5 +151,4 @@ export async function action({ request }: ActionFunctionArgs) {
   }
 
   return null;
-  // return redirect("/");
 }

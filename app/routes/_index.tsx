@@ -1,8 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-
-
-
 import type { MetaFunction } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react";
 import { useState } from "react";
