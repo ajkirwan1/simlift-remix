@@ -24,11 +24,11 @@ export default function MobileHeaderIcons({setMobileNavOpen}: { setMobileNavOpen
         }
       >
         {mobileIconOpen ? (
-          <IconContext.Provider value={{ color: "black", size: "40px" }}>
+          <IconContext.Provider value={{ color: "black", size: "35px" }}>
             <RxCross1 />
           </IconContext.Provider>
         ) : (
-          <IconContext.Provider value={{ color: "white", size: "40px" }}>
+          <IconContext.Provider value={{ color: "white", size: "35px" }}>
             <VscMenu />
           </IconContext.Provider>
         )}
