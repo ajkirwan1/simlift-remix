@@ -9,8 +9,8 @@ export default function Contact() {
   const actionData = useActionData<typeof action>();
 
   return (
-    <div className="h-85v">
-      <div className="fixed top-0 w-full z-10 border-b-1">
+    <div className="h-90v">
+      <div className="absolute top-0 w-full z-10 border-b-1">
         <HeaderHero />
       </div>
       <div className="relative w-full h-full ">
@@ -19,7 +19,7 @@ export default function Contact() {
           alt=""
           className="object-cover w-full h-full"
         />
-        <div className="flex flex-col-reverse sm:flex-row absolute top-1/4 sm:top-1/4 sm:right-32 w-screen sm:w-4/5 ">
+        <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 w-screen sm:w-4/5 ">
           <div className="hidden sm:block basis-2/6 text-amber-50">
             <div className="m-auto w-4/5 h-full text-center">
               <h3 className="text-5xl mt-20">Contact us</h3>

@@ -25,7 +25,7 @@ export default function HeaderHero() {
         </div>
       )}
       <NavLink to="/" className="flex items-center h-full">
-        <img alt="" src={logo} className="ml-8 h-[40%]" />
+        <img alt="" src={logo} className="ml-8 h-[30%] sm:h-[40%]" />
       </NavLink>
       <div className="max-sm:hidden w-1/3 mr-8">
         <ul className="flex w-full justify-around list-none">

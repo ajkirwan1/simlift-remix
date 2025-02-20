@@ -35,28 +35,25 @@ interface ModalProps {
 }
 
 const Modal = ({ item, handleClick }: ModalProps) => {
-  
   return (
-    <div
-      className="fixed h-full w-screen bg-black bg-opacity-80 flex justify-center items-center"
-    >
+    <div className="fixed h-full w-screen bg-black bg-opacity-80 flex justify-center items-center">
       <div className="w-11/12 sm:w-2/4 border border-orange-900 rounded-2xl shadow-lg bg-white text-black p-2">
         <div className="ml-4">
-          <h2 className="text-3xl mt-10">{item!.fields.name}</h2>
-          <h3 className="text-2xl mt-10">Features:</h3>
-          <ul className="list-disc list-inside mt-4">
+          <h2 className="text-3xl mt-4 sm:mt-10">{item!.fields.title}</h2>
+          <h3 className="text-lg sm:text-2xl mt-4 sm:mt-10"><b>Features:</b></h3>
+          <ul className="list-disc list-inside mt:2 sm:mt-4">
             {item!.fields.features.map((element, index) => (
               <li key={index}>{element}</li>
             ))}
           </ul>
-          <h3 className="text-2xl mt-10">Operational Accessories:</h3>
-          <ul className="list-disc list-inside mt-4">
+          <h3 className="text-lg sm:text-2xl mt-4 sm:mt-10"><b>Operational Accessories:</b></h3>
+          <ul className="list-disc list-inside mt:2 sm:mt-4">
             {item!.fields.accessories.map((element, index) => (
               <li key={index}>{element}</li>
             ))}
           </ul>
         </div>
-        <div className=" flex justify-evenly items-center text-center mt-8 mb-2">
+        <div className="flex justify-evenly items-center text-center mt-8 mb-2">
           <span
             className="hover:cursor-pointer hover:underline"
             onClick={() => handleClick()}
@@ -66,6 +63,9 @@ const Modal = ({ item, handleClick }: ModalProps) => {
           <NavLink
             className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border font-thin hover:bg-sky-800"
             to="/contact"
+            onClick={() => {
+              document.body.style.overflow = "unset";
+            }}
           >
             Enquire
           </NavLink>
@@ -108,13 +108,13 @@ export default function Products() {
         <Header />
       </div>
       <div className="ml-8 mt-8">
-        <h1 className="text-5xl">Products</h1>
-        <p className="mt-8">
+        <h1 className="text-2xl sm:text-4xl">Products</h1>
+        <p className="mt-6 sm:mt-8">
           Simlift provides a range of high precision engineered ceiling-mounted
           projector lifts
         </p>
       </div>
-      <div className="block content-center h-65v mt-8">
+      <div className="block content-center h-65v mt-4 sm:mt-8">
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-10 justify-items-center mt-8 mb-8">
           {Array.isArray(data) ? (
             <>
