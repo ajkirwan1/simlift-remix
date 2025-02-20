@@ -89,12 +89,12 @@ export default function Products() {
     }
 
     setBackdropOpen((val) => !val);
-    if (backdropOpen) {
-      document.body.style.overflow = "unset";
-    } else {
-      document.body.style.overflow = "hidden";
-      document.body.style.height = "100px";
-    }
+    // if (backdropOpen) {
+    //   document.body.style.overflow = "unset";
+    // } else {
+    //   document.body.style.overflow = "hidden";
+    //   document.body.style.height = "100px";
+    // }
   };
 
   const data = useLoaderData<typeof loader>();
