@@ -12,6 +12,7 @@ import Header from "~/components/header";
 import Footer from "~/components/footer";
 import { NavLink, useLoaderData } from "@remix-run/react";
 import { getAllLifts } from "api/get-all-lifts";
+import ProductModalMobile from "~/components/pages/products/product-modal-mobile"
 
 interface Item {
   fields: {
@@ -40,13 +41,17 @@ const Modal = ({ item, handleClick }: ModalProps) => {
       <div className="w-11/12 sm:w-2/4 border border-orange-900 rounded-2xl shadow-lg bg-white text-black p-2">
         <div className="ml-4">
           <h2 className="text-3xl mt-4 sm:mt-10">{item!.fields.title}</h2>
-          <h3 className="text-lg sm:text-2xl mt-4 sm:mt-10"><b>Features:</b></h3>
+          <h3 className="text-lg sm:text-2xl mt-4 sm:mt-10">
+            <b>Features:</b>
+          </h3>
           <ul className="list-disc list-inside mt:2 sm:mt-4">
             {item!.fields.features.map((element, index) => (
               <li key={index}>{element}</li>
             ))}
           </ul>
-          <h3 className="text-lg sm:text-2xl mt-4 sm:mt-10"><b>Operational Accessories:</b></h3>
+          <h3 className="text-lg sm:text-2xl mt-4 sm:mt-10">
+            <b>Operational Accessories:</b>
+          </h3>
           <ul className="list-disc list-inside mt:2 sm:mt-4">
             {item!.fields.accessories.map((element, index) => (
               <li key={index}>{element}</li>
@@ -102,7 +107,14 @@ export default function Products() {
   return (
     <>
       {backdropOpen && (
-        <Modal handleClick={handleClick} item={chosenItem}></Modal>
+        <>
+          {/* <div className="hidden sm:flex">
+            <Modal handleClick={handleClick} item={chosenItem}></Modal>
+          </div> */}
+          <div>
+            <ProductModalMobile handleClick={handleClick} item={chosenItem} />
+          </div>
+        </>
       )}
       <div className="bg-linear-to-r from-cyan-500 to-blue-500">
         <Header />
