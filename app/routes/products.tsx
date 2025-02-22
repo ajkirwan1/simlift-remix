@@ -10,7 +10,7 @@
 import { useState } from "react";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
-import { useLoaderData } from "@remix-run/react";
+import { NavLink, useLoaderData } from "@remix-run/react";
 import { getAllLifts } from "api/get-all-lifts";
 import ProductModalMobile from "~/components/pages/products/product-modal-mobile"
 
