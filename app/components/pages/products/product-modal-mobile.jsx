@@ -9,7 +9,7 @@ export default function ProductModalMobile({ handleClick, item }) {
   return (
     <>
       <div className="fixed h-full w-screen bg-black bg-opacity-80 flex justify-center items-center z-50">
-        <div className="flex flex-col w-11/12 sm:w-2/3 h-3/4 border border-orange-900 rounded-2xl shadow-lg bg-white text-black p-2 pt-[5vh]">
+        <div className="flex flex-col w-11/12 sm:w-2/3 h-auto border border-orange-900 rounded-2xl shadow-lg bg-white text-black p-2 pt-[5vh]">
           <h2 className="text-3xl mt-4 mb-4 sm:mt-10 m-auto text-center">
             {item.fields.title}
           </h2>
