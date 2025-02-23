@@ -116,7 +116,7 @@ export default function Index() {
         id="modal-overflow"
         className="snap-y snap-mandatory overflow-y-scroll h-screen"
       >
-        <div className="relative w-full h-screen snap-center snap-always">
+        <div className="relative w-full h-dvh sm:h-screen snap-center snap-always">
           <img
             src={heroImage}
             alt=""
@@ -151,7 +151,7 @@ export default function Index() {
             </div>
           </motion.div>
         </div>
-        <section className="relative w-full h-screen snap-center">
+        <section className="relative w-full h-dvh sm:h-screen snap-center">
           {backdropOpen && (
             <div>
               <Modal handleModal={handleModal} chosenItem={chosenItem} />
@@ -230,7 +230,7 @@ export default function Index() {
             </motion.div>
           </div>
         </section>
-        <section className="relative w-full h-screen snap-center">
+        <section className="relative w-full h-dvh sm:h-screen snap-center">
           <div className="h-20v bg-gradient-to-r from-simlift-left to-simlift-right" />
           <div className="block content-center h-65v">
             {Array.isArray(data) ? (
