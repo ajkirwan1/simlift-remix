@@ -7,7 +7,7 @@ import MobileHeaderIcons from "~/components/mobile/header-icons.tsx";
 export default function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   return (
-    <header className="bg-gradient-to-r from-simlift-left to-simlift-right flex justify-between items-center h-20v w-screen text-white font-thin ">
+    <header className="bg-gradient-to-r from-simlift-left to-simlift-right flex justify-between items-center h-20v w-full text-white font-thin ">
       {mobileNavOpen && (
         <div className="fixed top-0 left-0 w-full h-lvh bg-white transition duration-300 ease-in-out text-black">
           <ul className="flex flex-col h-100v items-center justify-center gap-7 text-3xl">

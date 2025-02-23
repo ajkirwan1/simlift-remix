@@ -162,7 +162,7 @@ export default function Index() {
             alt=""
             className="object-cover w-full h-screen"
           />
-          <div className="absolute flex flex-col w-full sm:w-2/3 top-[20%] sm:top-2/4 left-2/4 -translate-x-1/2 sm:-translate-y-1/2">
+          <div className="absolute flex flex-col w-[90%] top-[20%] sm:top-2/4 left-2/4 -translate-x-1/2 sm:-translate-y-1/2">
             <motion.div
               className="flex flex-col items-center w-full text-white text-center mb-4"
               variants={container}
@@ -235,6 +235,10 @@ export default function Index() {
           <div className="block content-center h-65v">
             {Array.isArray(data) ? (
               <Swiper
+              style={{
+                "--swiper-navigation-color": "rgb(124, 45, 18)"
+              
+              }}
                 className="h-full sm:h-4/6"
                 modules={[Navigation, Autoplay]}
                 slidesPerView={1}

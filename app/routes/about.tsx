@@ -30,11 +30,11 @@ export default function About() {
   return (
     <>
       <div className="flex flex-col min-h-85vh items-center">
-        <div className="bg-sky-950">
+        <div className="bg-sky-950 w-full">
           <Header />
         </div>
         <motion.div
-          className="flex flex-col flex-1 text-center justify-center gap-4 mt-8 mb-8"
+          className="flex flex-col flex-1 text-center justify-center mt-10 mb-10 gap-8"
           variants={container}
           initial="hidden"
           whileInView="show"

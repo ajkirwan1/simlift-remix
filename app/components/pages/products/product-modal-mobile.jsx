@@ -9,8 +9,8 @@ export default function ProductModalMobile({ handleClick, item }) {
   return (
     <>
       <div className="fixed h-full w-screen bg-black bg-opacity-80 flex justify-center items-center z-50">
-        <div className="flex flex-col w-11/12 sm:w-2/3 h-auto border border-orange-900 rounded-2xl shadow-lg bg-white text-black p-2 pt-[5vh]">
-          <h2 className="text-3xl mt-4 mb-4 sm:mt-10 m-auto text-center">
+        <div className="flex flex-col w-11/12 sm:w-2/3 h-auto border border-orange-900 rounded-2xl shadow-lg bg-white text-black p-2 pt-[3vh]">
+          <h2 className="text-3xl mt-4 sm:mt-10 m-auto text-center w-[70%] text-left">
             {item.fields.title}
           </h2>
           <div className="mt-[2vh]">
@@ -25,12 +25,13 @@ export default function ProductModalMobile({ handleClick, item }) {
               "--swiper-inactive-scale": ".85",
               "--swiper-mobile-inactive-scale": ".95",
               "--swiper-navigation-size": "34px",
+              "--swiper-navigation-color": "rgb(124, 45, 18)"
               //   "--swiper-wrapper-padding": "100px",
             }}
           >
             <SwiperSlide>
               <div className="flex flex-col items-center">
-                <h3 className="text-lg sm:text-2xl mt-4 sm:mt-10">
+                <h3 className="text-lg sm:text-2xl mb-4 sm:mt-10 w-[70%]">
                   <b>Features</b>
                 </h3>
                 <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 leading-6">
@@ -42,7 +43,7 @@ export default function ProductModalMobile({ handleClick, item }) {
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex flex-col items-center">
-                <h3 className="text-lg sm:text-2xl mt-4 sm:mt-10">
+                <h3 className="text-lg sm:text-2xl mb-4 sm:mt-10 w-[70%]">
                   <b>Operational Accessories:</b>
                 </h3>
                 <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 leading-6">
