@@ -9,7 +9,7 @@ export default function Contact() {
   const actionData = useActionData<typeof action>();
 
   return (
-    <div className="h-90v">
+    <div className="h-100v">
       <div className="absolute top-0 w-full z-10 border-b-1">
         <HeaderHero />
       </div>
