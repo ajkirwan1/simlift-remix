@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { MetaFunction } from "@remix-run/node"
+import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { useState } from "react";
 import heroImage from "/public/projector.jpg";
@@ -164,15 +164,15 @@ export default function Index() {
           />
           <div className="absolute flex flex-col w-[90%] top-[20%] sm:top-2/4 left-2/4 -translate-x-1/2 sm:-translate-y-1/2">
             <motion.div
-              className="flex flex-col items-center w-full text-white text-center mb-4"
+              className="flex flex-col items-center w-full text-white text-center mb-16"
               variants={container}
               initial="hidden"
               whileInView="show"
             >
-              <h1 className="text-2xl md:text-4xl mb-8">
+              <h1 className="text-2xl md:text-4xl mb-12 font-thin">
                 HIGH QUALITY PRODUCTS
               </h1>
-              <p className="text-lg md:text-2xl font-thin">
+              <p className="text-lg md:text-2xl font-normal">
                 Simlift became the no.1 producer of ceiling mounted projector
                 lifts in Poland
               </p>
@@ -223,7 +223,7 @@ export default function Index() {
                   src={guarantee}
                   className="h-7 sm:h-10 w-auto"
                 ></img>
-                <p className="text-black text-sm sm:text-lg mb-2 mt-[1vh]">
+                <p className="text-black text-sm sm:text-lg mb-2 mt-[1vh] p-4 pt-0">
                   20 years of manufacturing
                 </p>
               </motion.div>
@@ -235,10 +235,9 @@ export default function Index() {
           <div className="block content-center h-65v">
             {Array.isArray(data) ? (
               <Swiper
-              style={{
-                "--swiper-navigation-color": "rgb(124, 45, 18)"
-              
-              }}
+                style={{
+                  "--swiper-navigation-color": "rgb(66, 66, 66)",
+                }}
                 className="h-full sm:h-4/6"
                 modules={[Navigation, Autoplay]}
                 slidesPerView={1}
@@ -255,9 +254,10 @@ export default function Index() {
                         alt=""
                       ></img>
                       <div className="flex flex-col items-center justify-evenly basis-1/4">
-                        <h2 className="text-2xl sm:text-3xl mt-6">{item.fields.title}</h2>
-                        <p className="w-5/6 mt-2">{item.fields.description}
-                        </p>
+                        <h2 className="text-2xl sm:text-3xl mt-0">
+                          {item.fields.title}
+                        </h2>
+                        <p className="w-5/6 mt-2">{item.fields.description}</p>
                       </div>
                     </div>
                   </SwiperSlide>

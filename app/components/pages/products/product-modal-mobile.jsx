@@ -14,46 +14,46 @@ export default function ProductModalMobile({ handleClick, item }) {
             {item.fields.title}
           </h2>
           <div className="mt-[2vh]">
-          <Swiper
-            // className="h-full"
-            modules={[Navigation, Autoplay]}
-            // ref={swiperRef}
-            slidesPerView={1}
-            navigation
-            // loop={true}
-            style={{
-              "--swiper-inactive-scale": ".85",
-              "--swiper-mobile-inactive-scale": ".95",
-              "--swiper-navigation-size": "34px",
-              "--swiper-navigation-color": "rgb(124, 45, 18)"
-              //   "--swiper-wrapper-padding": "100px",
-            }}
-          >
-            <SwiperSlide>
-              <div className="flex flex-col items-center">
-                <h3 className="text-lg sm:text-2xl mb-4 sm:mt-10 w-[70%]">
-                  <b>Features</b>
-                </h3>
-                <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 leading-6">
-                  {item.fields.features.map((element, index) => (
-                    <li key={index}>{element}</li>
-                  ))}
-                </ul>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col items-center">
-                <h3 className="text-lg sm:text-2xl mb-4 sm:mt-10 w-[70%]">
-                  <b>Operational Accessories:</b>
-                </h3>
-                <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 leading-6">
-                  {item.fields.accessories.map((element, index) => (
-                    <li key={index}>{element}</li>
-                  ))}
-                </ul>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+            <Swiper
+              // className="h-full"
+              modules={[Navigation, Autoplay]}
+              // ref={swiperRef}
+              slidesPerView={1}
+              navigation
+              // loop={true}
+              style={{
+                "--swiper-inactive-scale": ".85",
+                "--swiper-mobile-inactive-scale": ".95",
+                "--swiper-navigation-size": "34px",
+                "--swiper-navigation-color": "rgb(124, 45, 18)",
+                //   "--swiper-wrapper-padding": "100px",
+              }}
+            >
+              <SwiperSlide>
+                <div className="flex flex-col items-center">
+                  <h3 className="text-lg sm:text-2xl mb-4 sm:mt-10 w-[70%]">
+                    <b>Features</b>
+                  </h3>
+                  <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 leading-6">
+                    {item.fields.features.map((element, index) => (
+                      <li key={index}>{element}</li>
+                    ))}
+                  </ul>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="flex flex-col items-center">
+                  <h3 className="text-lg sm:text-2xl mb-4 sm:mt-10 w-[70%]">
+                    <b>Operational Accessories:</b>
+                  </h3>
+                  <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 leading-6">
+                    {item.fields.accessories.map((element, index) => (
+                      <li key={index}>{element}</li>
+                    ))}
+                  </ul>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
           <div className="flex flex-1">
             <div className="flex flex-1 justify-center items-center gap-5 text-center mt-8 mb-2">
@@ -75,6 +75,7 @@ export default function ProductModalMobile({ handleClick, item }) {
               >
                 Enquire
               </NavLink>
+              <span role="button">SPECIFICATION</span>
             </div>
           </div>
         </div>

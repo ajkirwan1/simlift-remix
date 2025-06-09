@@ -29,7 +29,7 @@ const item = {
 export default function About() {
   return (
     <>
-      <div className="flex flex-col min-h-85vh items-center">
+      <div className="flex flex-col min-h-85vh items-center bg-gray-200">
         <div className="bg-sky-950 w-full">
           <Header />
         </div>
@@ -39,34 +39,55 @@ export default function About() {
           initial="hidden"
           whileInView="show"
         >
-          <motion.p className="text-base sm:text-lg max-w-[80vw] sm:max-w-[70vw]" variants={item}>
-            Simlift is the successor to the respected and established Avers
-            Screen projector lift brand.
+          <motion.p
+            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            variants={item}
+          >
+            <b>Simlift</b> is the successor to the respected and established
+            <b> Avers Screen</b> projector lift brand.
           </motion.p>
-          <motion.p className="text-base sm:text-lg max-w-[80vw] sm:max-w-[70vw]" variants={item}>
-            For nearly 15 years, our factory has been the sole producer of the
-            complete range of top-quality elevators.
+          <motion.p
+            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            variants={item}
+          >
+            For nearly <b>15 years</b>, our factory has been the sole producer
+            of the complete range of top-quality elevators.
           </motion.p>
-          <motion.p className="text-base sm:text-lg max-w-[80vw] sm:max-w-[70vw]" variants={item}>
-            Almost 3,000 of our elevators are already running flawlessly in
-            Poland and internationally.
+          <motion.p
+            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            variants={item}
+          >
+            <b>Almost 3,000</b> of our elevators are already running flawlessly
+            in Poland and internationally.
           </motion.p>
-          <motion.p className="text-base sm:text-lg max-w-[80vw] sm:max-w-[70vw]" variants={item}>
+          <motion.p
+            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            variants={item}
+          >
             By staying up-to-date with the latest multimedia projector trends,
             we continually adapt our devices to ensure our offerings are
             comprehensive and compatible.
           </motion.p>
-          <motion.p className="text-base sm:text-lg max-w-[80vw] sm:max-w-[70vw]" variants={item}>
+          <motion.p
+            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            variants={item}
+          >
             We are always open to customer requests that extend beyond our
             standard offerings.
           </motion.p>
-          <motion.p className="text-base sm:text-lg max-w-[80vw] sm:max-w-[70vw]" variants={item}>
-            We have produced elevators with a reach of 4 meters and a load
-            capacity of 80kg.
+          <motion.p
+            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            variants={item}
+          >
+            We have produced elevators with a reach of <b>4 meters</b> and a
+            load capacity of 80kg.
           </motion.p>
-          <motion.p className="text-base sm:text-lg max-w-[80vw] sm:max-w-[70vw]" variants={item}>
-            We always remain loyal to our business clients (B2B), who make up
-            90% of our customer base.
+          <motion.p
+            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            variants={item}
+          >
+            We always remain loyal to our business <b>clients (B2B)</b>, who
+            make up 90% of our customer base.
           </motion.p>
         </motion.div>
       </div>
