@@ -1,9 +1,15 @@
 /** @format */
 
+import { Link } from "@remix-run/react";
+
 export default function Footer() {
   return (
-    <footer className="flex justify-between items-center h-15v bg-gradient-to-r from-simlift-left to-simlift-right  text-white border-t border-t-orange-900">
+    <footer className="flex justify-between items-center h-15v bg-gradient-to-r from-simlift-left to-simlift-right  text-white border-t border-t-orange800">
       <p className="text-xxs sm:text-xs ml-5">Privacy Policy</p>
+
+      <Link to="https://ak-development.com.pl">
+        <p className="text-xs underline ">Developed by A&K</p>
+      </Link>
       <div className="text-xxs sm:text-xs ml-5">
         <p>Avers Screens sp. z o.o.</p>
         <p>ul.Radziejowicka 170B</p>

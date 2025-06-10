@@ -34,7 +34,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                   <h3 className="text-lg sm:text-2xl mb-4 sm:mt-10 w-[70%]">
                     <b>Features</b>
                   </h3>
-                  <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 leading-6">
+                  <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 leading-7 ">
                     {item.fields.features.map((element, index) => (
                       <li key={index}>{element}</li>
                     ))}
@@ -42,7 +42,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center mt-3">
                   <h3 className="text-lg sm:text-2xl mb-4 sm:mt-10 w-[70%]">
                     <b>Operational Accessories:</b>
                   </h3>

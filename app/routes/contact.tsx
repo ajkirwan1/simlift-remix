@@ -13,20 +13,16 @@ export default function Contact() {
       <div className="absolute top-0 w-full z-10 border-b-1">
         <HeaderHero />
       </div>
-      <div className="relative w-full h-full ">
-        <img
-          src={glassesImage}
-          alt=""
-          className="object-cover w-full h-full"
-        />
-        <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 w-screen sm:w-4/5 ">
+      <div className="relative w-full h-full">
+        <img src={glassesImage} alt="" className="object-cover w-full h-full" />
+        <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 w-screen sm:w-4/5 pt-[7%]">
           <div className="hidden sm:block basis-2/6 text-amber-50">
             <div className="m-auto w-4/5 h-full text-center">
-              <h3 className="text-5xl mt-20">Contact us</h3>
+              <h3 className="text-5xl mt-20  font-extralight">Contact us</h3>
               <div className="mt-10">
-                <p>AVERS SCREENS sp.z.o.o</p>
-                <p>AVERS SCREENS sp.z.o.o</p>
-                <p>AVERS SCREENS sp.z.o.o</p>
+                <p className="mb-2">biuro@simlift.pl</p>
+                <p className="mb-2">+48 798 729 285 </p>
+                <p>+48 601 302 840</p>
               </div>
             </div>
           </div>
@@ -34,7 +30,7 @@ export default function Contact() {
             <span className="text-white text-2xl">Enquire now</span>
             <Form
               method="post"
-              className="sm:grid sm:grid-rows-auto sm:grid-cols-[50%_50%] h-fit bg-white p-6 rounded-md mt-2"
+              className="sm:grid sm:grid-rows-auto sm:grid-cols-[50%_50%] h-fitneutral-400 p-6 rounded-md mt-2"
             >
               <p className="col-start-1 col-end-2 row-start-1 h-full sm:w-5/6">
                 <label className="flex flex-col">
@@ -106,7 +102,7 @@ export default function Contact() {
               <div className="flex col-span-full m-auto h-16">
                 <button
                   type="submit"
-                  className="border border-solid w-32 h-10 m-auto rounded-md bg-sky-900 text-white text-sm font-light hover:bg-sky-800"
+                  className="border border-solid w-32 h-12 m-auto rounded-md bg-stone-50 text-black text-sm font-normal hover:bg-slate-400 opacity-70"
                 >
                   Submit
                 </button>

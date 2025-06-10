@@ -34,6 +34,9 @@ export default {
       marginTop: {
         "10v": "10vh",
       },
+      fontSize: {
+        "text-xs": "0.9em",
+      },
       // fontFamily: {
       //   sans: [
       //     "Inter",

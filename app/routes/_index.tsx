@@ -128,7 +128,7 @@ export default function Index() {
             initial="hidden"
             whileInView="show"
           >
-            <div className="flex flex-col gap-[10vh] items-center">
+            <div className="flex flex-col gap-[11vh] items-center">
               <motion.h1
                 className="text-2xl md:text-4xl w-3/4 text-center"
                 variants={itemTop}
@@ -145,8 +145,8 @@ export default function Index() {
                 className="text-lg md:text-2xl w-3/4 max-w-7xl font-thin"
                 variants={itemTop}
               >
-                From the beginning, and through the evaluation process, we make
-                sure the quality is outstanding
+                From the beginning through the evaluation process we make sure
+                the quality is outstanding
               </motion.p>
             </div>
           </motion.div>
@@ -242,14 +242,13 @@ export default function Index() {
                 modules={[Navigation, Autoplay]}
                 slidesPerView={1}
                 navigation
-                autoplay
                 loop={true}
               >
                 {data.map((item, index) => (
                   <SwiperSlide key={index}>
                     <div className="flex flex-col sm:flex-row h-full justify-center content-center sm:gap-28 text-center sm:leading-8">
                       <img
-                        className="w-2/5 sm:w-1/6 h-auto ml-[50%] sm:ml-0 -translate-x-1/2 sm:-translate-x-0"
+                        className="w-2/5 sm:w-1/6 h-auto ml-[50%] sm:ml-0 -translate-x-1/2 sm:-translate-x-0 self-center"
                         src={item.fields.image!.fields.file.url}
                         alt=""
                       ></img>
