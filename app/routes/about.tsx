@@ -3,6 +3,10 @@ import Footer from "~/components/footer";
 import Header from "~/components/header";
 import { motion } from "motion/react";
 
+import { useLoaderData } from "@remix-run/react";
+//import { createLoader } from "~/lib/contentful.server";
+//import { validateLocale } from "~/config/locales";
+
 const container = {
   show: {
     opacity: 1,
@@ -27,6 +31,8 @@ const item = {
 };
 
 export default function About() {
+  //const { content } = useLoaderData();
+
   return (
     <>
       <div className="flex flex-col min-h-85vh items-center bg-gray-200">
@@ -43,51 +49,65 @@ export default function About() {
             className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
             variants={item}
           >
-            <b>Simlift</b> is the successor to the respected and established
-            <b> Avers Screen</b> projector lift brand.
+            Avers Screens has been a manufacturer of screens and a wide range of
+            projection accessories for over 20 years.
           </motion.p>
           <motion.p
             className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
             variants={item}
           >
-            For nearly <b>15 years</b>, our factory has been the sole producer
-            of the complete range of top-quality elevators.
+            15 years ago we started the production of projector lifts.
           </motion.p>
           <motion.p
             className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
             variants={item}
           >
-            <b>Almost 3,000</b> of our elevators are already running flawlessly
-            in Poland and internationally.
+            Lifts are now our main product.
+          </motion.p>
+
+          <motion.p
+            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            variants={item}
+          >
+            Such concentration has allowed us to refine the design and
+            technology of these devices. As a result, our lifts are practically
+            failure-free.
           </motion.p>
           <motion.p
             className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
             variants={item}
           >
-            By staying up-to-date with the latest multimedia projector trends,
-            we continually adapt our devices to ensure our offerings are
-            comprehensive and compatible.
+            There are almost 3,000 of them in operation in Poland and Europe.
           </motion.p>
           <motion.p
             className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
             variants={item}
           >
-            We are always open to customer requests that extend beyond our
-            standard offerings.
+            We try to constantly modify our devices to ensure the compatibility
+            of the offer with the current offer of multimedia projectors on the
+            market.
           </motion.p>
           <motion.p
             className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
             variants={item}
           >
-            We have produced elevators with a reach of <b>4 meters</b> and a
-            load capacity of 80kg.
+            We are also open to individual customer requirements. We also make
+            individual non-standard lifts.
           </motion.p>
           <motion.p
             className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
             variants={item}
           >
-            We always remain loyal to our business <b>clients (B2B)</b>, who
-            make up 90% of our customer base.
+            Our portfolio includes lifts with a reach of 4 meters and a load
+            capacity of 80 kg.
+          </motion.p>
+
+          <motion.p
+            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            variants={item}
+          >
+            We always remain loyal to our business clients (B2B) who make up 90%
+            of our customer base.
           </motion.p>
         </motion.div>
       </div>

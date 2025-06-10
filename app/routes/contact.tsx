@@ -90,7 +90,7 @@ export default function Contact() {
                     name="message"
                     placeholder="I would like to enquire about..."
                     // rows={5}
-                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0 "
                   ></textarea>
                 </label>
               </p>
@@ -102,7 +102,7 @@ export default function Contact() {
               <div className="flex col-span-full m-auto h-16">
                 <button
                   type="submit"
-                  className="border border-solid w-32 h-12 m-auto rounded-md bg-stone-50 text-black text-sm font-normal hover:bg-slate-400 opacity-70"
+                  className="border border-solid w-32 h-12 m-auto rounded-md bg-stone-50 text-black text-sm font-normal hover:bg-slate-400 opacity-70 mt-10 mr-10"
                 >
                   Submit
                 </button>

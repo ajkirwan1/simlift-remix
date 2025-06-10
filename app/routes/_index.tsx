@@ -178,7 +178,7 @@ export default function Index() {
               </p>
             </motion.div>
             <motion.div
-              className="flex flex-col sm:flex-row justify-around items-center w-full top-2/4 font-thin"
+              className="flex flex-col sm:flex-row justify-around items-center w-full top-2/4 font-thin "
               variants={containerSection2}
               initial="hidden"
               whileInView="show"
@@ -246,7 +246,7 @@ export default function Index() {
               >
                 {data.map((item, index) => (
                   <SwiperSlide key={index}>
-                    <div className="flex flex-col sm:flex-row h-full justify-center content-center sm:gap-28 text-center sm:leading-8">
+                    <div className="flex flex-col sm:flex-row h-full justify-center content-center sm:gap-28 text-center sm:leading-8 ">
                       <img
                         className="w-2/5 sm:w-1/6 h-auto ml-[50%] sm:ml-0 -translate-x-1/2 sm:-translate-x-0 self-center"
                         src={item.fields.image!.fields.file.url}

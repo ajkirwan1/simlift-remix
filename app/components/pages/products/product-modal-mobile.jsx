@@ -67,7 +67,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                 All Products
               </span>
               <NavLink
-                className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border font-thin hover:bg-sky-800"
+                className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border font-normal hover:bg-sky-800"
                 to="/contact"
                 onClick={() => {
                   document.body.style.overflow = "unset";
@@ -75,7 +75,20 @@ export default function ProductModalMobile({ handleClick, item }) {
               >
                 Enquire
               </NavLink>
-              <span role="button">SPECIFICATION</span>
+
+              <a
+                href="/public/SimliftS.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-blue-700"
+              >
+                Open PDF
+              </a>
+              <img
+                src="/public/pdficon.png"
+                alt="ikona pdf"
+                className="w-10 h-10 mr-2"
+              />
             </div>
           </div>
         </div>
