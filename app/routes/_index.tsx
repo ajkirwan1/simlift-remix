@@ -243,6 +243,7 @@ export default function Index() {
                 slidesPerView={1}
                 navigation
                 loop={true}
+                autoplay
               >
                 {data.map((item, index) => (
                   <SwiperSlide key={index}>

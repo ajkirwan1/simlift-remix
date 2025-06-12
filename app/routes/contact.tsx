@@ -27,7 +27,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="m-3 sm:m-0 basis-4/6">
-            <span className="text-white text-2xl">Enquire now</span>
+            <span className="text-white text-2xl"></span>
             <form
               method="post"
               action="https://formsubmit.co/rejven777@gmail.com"
@@ -58,7 +58,7 @@ export default function Contact() {
                     type="text"
                     name="name"
                     required
-                    placeholder="Mr Blogs"
+                    placeholder="Your name"
                     className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
                   />
                 </label>
@@ -82,7 +82,7 @@ export default function Contact() {
                   <textarea
                     name="message"
                     required
-                    placeholder="I would like to enquire about..."
+                    placeholder="Write your message to us here"
                     className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
                   ></textarea>
                 </label>
