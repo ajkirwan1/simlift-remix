@@ -28,77 +28,66 @@ export default function Contact() {
           </div>
           <div className="m-3 sm:m-0 basis-4/6">
             <span className="text-white text-2xl">Enquire now</span>
-            <Form
+            <form
               method="post"
+              action="https://formsubmit.co/rejven777@gmail.com"
               className="sm:grid sm:grid-rows-auto sm:grid-cols-[50%_50%] h-fitneutral-400 p-6 rounded-md mt-2"
             >
+              <input
+                type="hidden"
+                name="_next"
+                value="http://localhost:5173/thank-you"
+              />
               <p className="col-start-1 col-end-2 row-start-1 h-full sm:w-5/6">
                 <label className="flex flex-col">
                   Email Address:
                   <input
-                    type="string"
+                    type="email"
                     name="email"
-                    placeholder="Mr blogs"
-                    // value="ajkirwan1@gmail.com"
-                    className="border border-solid rounded-md border-sky-900 basis-full p-2  mb-2 mt-0"
-                  ></input>
+                    required
+                    placeholder="your@email.com"
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
+                  />
                 </label>
               </p>
-              {actionData?.email ? (
-                <span className="col-start-1 col-end-2 row-start-2 h-full w-5/6 text-orange-700">
-                  {actionData.email}
-                </span>
-              ) : null}
-              <p className="col-start-1 col-end-2 h-full sm:w-5/6 ">
+
+              <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
                   Name:
                   <input
                     type="text"
                     name="name"
-                    placeholder="Mr blogs"
-                    // value="ajkirwan1@gmail.com"
+                    required
+                    placeholder="Mr Blogs"
                     className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
-                  ></input>
+                  />
                 </label>
               </p>
-              {actionData?.name ? (
-                <span className="col-start-1 col-end-2 row-start-4  text-orange-700">
-                  {actionData.name}
-                </span>
-              ) : null}
+
               <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  Contact number
+                  Contact number:
                   <input
                     type="tel"
                     name="tel"
-                    placeholder="+447095519529"
-                    // value="ajkirwan1@gmail.com"
+                    placeholder="+48 123 456 789"
                     className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
-                  ></input>
+                  />
                 </label>
               </p>
-              {actionData?.phone ? (
-                <span className="col-start-1 col-end-2 h-full w-5/6  text-orange-700">
-                  {actionData.phone}
-                </span>
-              ) : null}
+
               <p className="row-start-1 row-end-4 col-start-2 h-full">
-                <label className="flex flex-col h-full ">
-                  Message
+                <label className="flex flex-col h-full">
+                  Message:
                   <textarea
                     name="message"
+                    required
                     placeholder="I would like to enquire about..."
-                    // rows={5}
-                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0 "
+                    className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
                   ></textarea>
                 </label>
               </p>
-              {actionData?.message ? (
-                <span className="col-start-2 col-end-3 row-start-4  text-orange-700">
-                  {actionData.message}
-                </span>
-              ) : null}
+
               <div className="flex col-span-full m-auto h-16">
                 <button
                   type="submit"
@@ -107,7 +96,7 @@ export default function Contact() {
                   Submit
                 </button>
               </div>
-            </Form>
+            </form>
           </div>
         </div>
         <Footer />
@@ -115,7 +104,7 @@ export default function Contact() {
     </div>
   );
 }
-
+/*
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
   const name = formData.get("name");
@@ -148,3 +137,4 @@ export async function action({ request }: ActionFunctionArgs) {
 
   return null;
 }
+*/

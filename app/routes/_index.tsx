@@ -238,7 +238,7 @@ export default function Index() {
                 style={{
                   "--swiper-navigation-color": "rgb(66, 66, 66)",
                 }}
-                className="h-full sm:h-4/6"
+                className="h-full"
                 modules={[Navigation, Autoplay]}
                 slidesPerView={1}
                 navigation

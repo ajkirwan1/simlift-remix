@@ -31,7 +31,7 @@ export default function ProductModalMobile({ handleClick, item }) {
             >
               <SwiperSlide>
                 <div className="flex flex-col items-center">
-                  <h3 className="text-lg sm:text-2xl mb-4 sm:mt-10 w-[70%]">
+                  <h3 className="text-lg sm:text-2xl mb-4 sm:mt-2 w-[70%]">
                     <b>Features</b>
                   </h3>
                   <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 leading-7 ">
