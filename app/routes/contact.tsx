@@ -40,7 +40,7 @@ export default function Contact() {
               />
               <p className="col-start-1 col-end-2 row-start-1 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  Email Address:
+                  <span className="text-white">Email Address:</span>
                   <input
                     type="email"
                     name="email"
@@ -53,7 +53,7 @@ export default function Contact() {
 
               <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  Name:
+                  <span className="text-white">Name:</span>
                   <input
                     type="text"
                     name="name"
@@ -66,7 +66,7 @@ export default function Contact() {
 
               <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  Contact number:
+                  <span className="text-white">Contact number:</span>
                   <input
                     type="tel"
                     name="tel"
@@ -78,7 +78,7 @@ export default function Contact() {
 
               <p className="row-start-1 row-end-4 col-start-2 h-full">
                 <label className="flex flex-col h-full">
-                  Message:
+                  <span className="text-white">Message:</span>
                   <textarea
                     name="message"
                     required
