@@ -14,11 +14,15 @@ export default function Contact() {
         <HeaderHero />
       </div>
       <div className="relative w-full h-full">
-        <img src={glassesImage} alt="" className="object-cover w-full h-full" />
-        <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 w-screen sm:w-4/5 pt-[7%]">
+        <img
+          src={glassesImage}
+          alt=""
+          className="object-cover w-full h-full filter brightness-[0.6]"
+        />
+        <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 w-screen sm:w-4/5 pt-[7%] bg-[rgb(17,89,120,0.4)] rounded-[30px] p-[20px]">
           <div className="hidden sm:block basis-2/6 text-amber-50">
             <div className="m-auto w-4/5 h-full text-center">
-              <h3 className="text-5xl mt-20  font-extralight">Contact us</h3>
+              <h3 className="text-4xl mt-20  font-extralight">Contact us</h3>
               <div className="mt-10">
                 <p className="mb-2">biuro@simlift.pl</p>
                 <p className="mb-2">+48 798 729 285 </p>
@@ -91,7 +95,7 @@ export default function Contact() {
               <div className="flex col-span-full m-auto h-16">
                 <button
                   type="submit"
-                  className="border border-solid w-32 h-12 m-auto rounded-md bg-stone-50 text-black text-sm font-normal hover:bg-slate-400 opacity-70 mt-10 mr-10"
+                  className="border border-solid w-32 h-12 m-auto rounded-md bg-stone-50 text-black text-sm font-normal hover:bg-slate-400 opacity-70 mt-10 sm:mr-10"
                 >
                   Submit
                 </button>

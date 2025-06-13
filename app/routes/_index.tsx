@@ -133,7 +133,7 @@ export default function Index() {
                 className="text-2xl md:text-4xl w-3/4 text-center"
                 variants={itemTop}
               >
-                Ceiling mounted projector lifts
+                Ceiling-mounted projector lifts
               </motion.h1>
               <motion.p
                 className="text-lg md:text-2xl w-3/4 font-thin"
@@ -160,7 +160,7 @@ export default function Index() {
           <img
             src={glassesImage}
             alt=""
-            className="object-cover w-full h-screen"
+            className="object-cover w-full h-screen filter brightness-[0.6]"
           />
           <div className="absolute flex flex-col w-[90%] top-[20%] sm:top-2/4 left-2/4 -translate-x-1/2 sm:-translate-y-1/2">
             <motion.div
@@ -186,7 +186,7 @@ export default function Index() {
               <motion.div
                 className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3 sm:mb-0"
+            justify-center hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(0)}
               >
@@ -198,7 +198,7 @@ export default function Index() {
               <motion.div
                 className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3 sm:mb-0"
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(1)}
               >
@@ -214,7 +214,7 @@ export default function Index() {
               <motion.div
                 className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3 sm:mb-0"
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(2)}
               >

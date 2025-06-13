@@ -40,7 +40,7 @@ export default function About() {
           <Header />
         </div>
         <motion.div
-          className="flex flex-col flex-1 text-center justify-center mt-10 mb-10 gap-8"
+          className="flex flex-col flex-1 text-center justify-center mt-10 mb-10 gap-8 px-6 sm:px-0"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -50,7 +50,7 @@ export default function About() {
           </motion.h1>
 
           <motion.p
-            className="text-base-8 sm:text-lg/8 max-w-[600px] sm:max-w-[600px] text-center"
+            className="text-base-8 sm:text-lg/8 max-w-[400px] sm:max-w-[600px] px-10 text-center"
             variants={item}
           >
             Avers Screens has been a manufacturer of screens and a wide range of
@@ -65,7 +65,7 @@ export default function About() {
             failure-free.
           </motion.p>
           <motion.p
-            className="text-base-8 sm:text-lg/8 max-w-[600px] sm:max-w-[600px] text-center border-t-2 p-10 pb-0 border-cyan-800"
+            className="text-base-8 sm:text-lg/8 max-w-[400px] sm:max-w-[600px] text-center border-t-2 p-10 pb-0 border-cyan-800"
             variants={item}
           >
             There are almost 3,000 of them in operation in Poland and Europe.
@@ -78,7 +78,7 @@ export default function About() {
             individual non-standard lifts.
           </motion.p>
           <motion.p
-            className="text-base-8 sm:text-lg/8 max-w-[600px] sm:max-w-[600px] text-center border-t-2 p-10 border-cyan-800"
+            className="text-base-8 sm:text-lg/8 max-w-[400px] sm:max-w-[600px] text-center border-t-2 p-10 border-cyan-800"
             variants={item}
           >
             Our portfolio includes lifts with a reach of 4 meters and a load
