@@ -14,11 +14,15 @@ export default function Contact() {
         <HeaderHero />
       </div>
       <div className="relative w-full h-full">
-        <img src={glassesImage} alt="" className="object-cover w-full h-full" />
-        <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 w-screen sm:w-4/5 pt-[7%]">
+        <img
+          src={glassesImage}
+          alt=""
+          className="object-cover w-full h-full filter brightness-[0.6]"
+        />
+        <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 sm:w-2/3 bg-[rgb(17,89,120,0.4)] rounded-[30px] p-[0px] sm:p-[20px] sm:left-[16%] w-4/5 left-[10%]">
           <div className="hidden sm:block basis-2/6 text-amber-50">
             <div className="m-auto w-4/5 h-full text-center">
-              <h3 className="text-5xl mt-20  font-extralight">Contact us</h3>
+              <h3 className="text-4xl mt-20  font-extralight">Contact us</h3>
               <div className="mt-10">
                 <p className="mb-2">biuro@simlift.pl</p>
                 <p className="mb-2">+48 798 729 285 </p>
@@ -26,11 +30,11 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="m-3 sm:m-0 basis-4/6">
+          <div className="m-3 sm:m-0 basis-4/6 pb-6">
             <span className="text-white text-2xl"></span>
             <form
               method="post"
-              action="https://formsubmit.co/rejven777@gmail.com"
+              action="https://formsubmit.co/biuro@simlift.pl"
               className="sm:grid sm:grid-rows-auto sm:grid-cols-[50%_50%] h-fitneutral-400 p-6 rounded-md mt-2"
             >
               <input
@@ -40,7 +44,7 @@ export default function Contact() {
               />
               <p className="col-start-1 col-end-2 row-start-1 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  Email Address:
+                  <span className="text-white">Email Address:</span>
                   <input
                     type="email"
                     name="email"
@@ -53,7 +57,7 @@ export default function Contact() {
 
               <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  Name:
+                  <span className="text-white">Name:</span>
                   <input
                     type="text"
                     name="name"
@@ -66,7 +70,7 @@ export default function Contact() {
 
               <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  Contact number:
+                  <span className="text-white">Contact number:</span>
                   <input
                     type="tel"
                     name="tel"
@@ -78,7 +82,7 @@ export default function Contact() {
 
               <p className="row-start-1 row-end-4 col-start-2 h-full">
                 <label className="flex flex-col h-full">
-                  Message:
+                  <span className="text-white">Message:</span>
                   <textarea
                     name="message"
                     required
@@ -91,7 +95,7 @@ export default function Contact() {
               <div className="flex col-span-full m-auto h-16">
                 <button
                   type="submit"
-                  className="border border-solid w-32 h-12 m-auto rounded-md bg-stone-50 text-black text-sm font-normal hover:bg-slate-400 opacity-70 mt-10 mr-10"
+                  className="border border-solid w-32 h-12 m-auto rounded-md bg-stone-50 text-black text-sm font-normal hover:bg-slate-400 opacity-70 mt-10 sm:mr-10"
                 >
                   Submit
                 </button>

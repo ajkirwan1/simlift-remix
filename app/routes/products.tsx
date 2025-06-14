@@ -70,11 +70,11 @@ export default function Products() {
         <Header />
       </div>
       <div className="bg-gray-200">
-        <div className="ml-8 pt-8">
+        <div className="p-8 pb-0">
           <h1 className="text-2xl sm:text-4xl text-center text-gray-700">
             Products
           </h1>
-          <p className="mt-6 sm:mt-8 text-xl text-center font-light">
+          <p className="mt-6 sm:mt-8 text-l sm:text-xl text-center font-light">
             Simlift provides a range of high precision engineered
             ceiling-mounted projector lifts
           </p>

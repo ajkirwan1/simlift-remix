@@ -120,31 +120,27 @@ export default function Index() {
           <img
             src={heroImage}
             alt=""
-            className="object-cover w-full h-screen"
+            className="object-cover w-full h-screen filter brightness-[0.6]"
           />
           <motion.div
-            className="absolute flex flex-col items-center w-full top-1/4 text-white text-center "
+            className="absolute flex flex-col items-center w-full top-1/3 text-white text-center "
             variants={containerTop}
             initial="hidden"
             whileInView="show"
           >
-            <div className="flex flex-col gap-[11vh] items-center">
+            <div className="flex flex-col gap-[7vh] items-center">
               <motion.h1
                 className="text-2xl md:text-4xl w-3/4 text-center"
                 variants={itemTop}
               >
-                Ceiling mounted projector lifts
+                Ceiling-mounted projector lifts
               </motion.h1>
               <motion.p
-                className="text-lg md:text-2xl w-3/4 font-thin"
+                className="text-lg md:text-2xl/10 w-3/4 font-thin"
                 variants={itemTop}
               >
                 Our aim is to deliver top-quality products
-              </motion.p>
-              <motion.p
-                className="text-lg md:text-2xl w-3/4 max-w-7xl font-thin"
-                variants={itemTop}
-              >
+                <br />
                 From the beginning through the evaluation process we make sure
                 the quality is outstanding
               </motion.p>
@@ -160,7 +156,7 @@ export default function Index() {
           <img
             src={glassesImage}
             alt=""
-            className="object-cover w-full h-screen"
+            className="object-cover w-full h-screen filter brightness-[0.6]"
           />
           <div className="absolute flex flex-col w-[90%] top-[20%] sm:top-2/4 left-2/4 -translate-x-1/2 sm:-translate-y-1/2">
             <motion.div
@@ -186,7 +182,7 @@ export default function Index() {
               <motion.div
                 className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3 sm:mb-0"
+            justify-center hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(0)}
               >
@@ -198,7 +194,7 @@ export default function Index() {
               <motion.div
                 className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3 sm:mb-0"
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(1)}
               >
@@ -214,7 +210,7 @@ export default function Index() {
               <motion.div
                 className="flex flex-col border border-solid rounded-lg shadow-2xl
             text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-3 sm:mb-0"
+            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(2)}
               >
@@ -249,7 +245,7 @@ export default function Index() {
                   <SwiperSlide key={index}>
                     <div className="flex flex-col sm:flex-row h-full justify-center content-center sm:gap-28 text-center sm:leading-8 ">
                       <img
-                        className="w-2/5 sm:w-1/6 h-auto ml-[50%] sm:ml-0 -translate-x-1/2 sm:-translate-x-0 self-center"
+                        className="w-2/5 sm:w-1/6 h-auto  sm:ml-0 sm:-translate-x-0 self-center mb-4"
                         src={item.fields.image!.fields.file.url}
                         alt=""
                       ></img>

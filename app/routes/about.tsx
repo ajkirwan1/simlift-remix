@@ -40,72 +40,50 @@ export default function About() {
           <Header />
         </div>
         <motion.div
-          className="flex flex-col flex-1 text-center justify-center mt-10 mb-10 gap-8"
+          className="flex flex-col flex-1 text-center justify-center mt-10 mb-10 gap-8 px-6 sm:px-0"
           variants={container}
           initial="hidden"
           whileInView="show"
         >
+          <motion.h1 className="text-2xl sm:text-4xl text-center text-gray-700">
+            About
+          </motion.h1>
+
           <motion.p
-            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            className="text-base-8 sm:text-lg/9 max-w-[400px] sm:max-w-[600px] px-6 text-center"
             variants={item}
           >
             Avers Screens has been a manufacturer of screens and a wide range of
             projection accessories for over 20 years.
-          </motion.p>
-          <motion.p
-            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
-            variants={item}
-          >
+            <br />
             15 years ago we started the production of projector lifts.
-          </motion.p>
-          <motion.p
-            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
-            variants={item}
-          >
+            <br />
             Lifts are now our main product.
-          </motion.p>
-
-          <motion.p
-            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
-            variants={item}
-          >
+            <br />
             Such concentration has allowed us to refine the design and
             technology of these devices. As a result, our lifts are practically
             failure-free.
           </motion.p>
           <motion.p
-            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            className="text-base-8 sm:text-lg/9 max-w-[400px] sm:max-w-[600px] text-center border-t-2 p-6 pb-0 border-cyan-800"
             variants={item}
           >
             There are almost 3,000 of them in operation in Poland and Europe.
-          </motion.p>
-          <motion.p
-            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
-            variants={item}
-          >
+            <br />
             We try to constantly modify our devices to ensure the compatibility
             of the offer with the current offer of multimedia projectors on the
             market.
-          </motion.p>
-          <motion.p
-            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
-            variants={item}
-          >
+            <br />
             We are also open to individual customer requirements. We also make
             individual non-standard lifts.
           </motion.p>
           <motion.p
-            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
+            className="text-base-8 sm:text-lg/9 max-w-[400px] sm:max-w-[600px] text-center border-t-2 p-6 border-cyan-800"
             variants={item}
           >
             Our portfolio includes lifts with a reach of 4 meters and a load
             capacity of 80 kg.
-          </motion.p>
-
-          <motion.p
-            className="text-base sm:text-lg max-w-[80vw] sm:max-w-[50vw] text-center"
-            variants={item}
-          >
+            <br />
             We always remain loyal to our business clients (B2B) who make up 90%
             of our customer base.
           </motion.p>

@@ -16,10 +16,10 @@ export default function ProductModalMobile({ handleClick, item }) {
             src={close}
             onClick={() => handleClick()}
             onKeyDown={(e) => e.key === "Enter" && handleClick(item)}
-            className="ml-8 h-[40px] w-[40px] sm:h-[40px]  absolute right-5 cursor-pointer"
+            className="ml-8 h-[30px] w-[30px] sm:h-[40px] sm:w-[40px]  absolute right-5 cursor-pointer"
           />
 
-          <h2 className="text-3xl mt-4 sm:mt-10 m-auto text-center w-[70%] text-left">
+          <h2 className="text-2xl mt-4 sm:mt-10 m-auto text-center w-[70%] text-left">
             {item.fields.title}
           </h2>
           <div className="mt-[2vh]">
@@ -33,8 +33,8 @@ export default function ProductModalMobile({ handleClick, item }) {
               style={{
                 "--swiper-inactive-scale": ".85",
                 "--swiper-mobile-inactive-scale": ".95",
-                "--swiper-navigation-size": "34px",
-                "--swiper-navigation-color": "rgb(124, 45, 18)",
+                "--swiper-navigation-size": "30px",
+                "--swiper-navigation-color": "rgb(44, 44, 42)",
                 //   "--swiper-wrapper-padding": "100px",
               }}
             >
@@ -43,9 +43,9 @@ export default function ProductModalMobile({ handleClick, item }) {
                   <h3 className="text-lg sm:text-2xl mb-4 sm:mt-2 w-[70%]">
                     <b>Features</b>
                   </h3>
-                  <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-4 pb-5 leading-7 ">
+                  <ul className="w-[70%] list-inside mt:3 sm:mt-4 text-sm sm:text-lg pb-5 leading-7 ">
                     {item.fields.features.map((element, index) => (
-                      <li key={index}>{element}</li>
+                      <li key={index}>— {element}</li>
                     ))}
                   </ul>
                 </div>
@@ -55,9 +55,9 @@ export default function ProductModalMobile({ handleClick, item }) {
                   <h3 className="text-lg sm:text-2xl mb-4 sm:mt-0 w-[70%]">
                     <b>Operational Accessories:</b>
                   </h3>
-                  <ul className="list-disc w-[70%] list-inside mt:2 sm:mt-5 leading-6">
+                  <ul className=" w-[70%] list-inside mt:2 sm:mt-5 text-sm sm:text-lg leading-6">
                     {item.fields.accessories.map((element, index) => (
-                      <li key={index}>{element}</li>
+                      <li key={index}>— {element}</li>
                     ))}
                   </ul>
                 </div>
@@ -85,19 +85,20 @@ export default function ProductModalMobile({ handleClick, item }) {
                 Enquire
               </NavLink>
 
-              <a
-                href="/public/SimliftS.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-blue-700"
-              >
-                Open PDF
-              </a>
-              <img
-                src="/public/pdficon.png"
-                alt="ikona pdf"
-                className="w-10 h-10 mr-2"
-              />
+              {item.fields.pdf?.fields?.file?.url && (
+                <a
+                  href={`https:${item.fields.pdf.fields.file.url}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-100 hover:opacity-100 sm:opacity-70"
+                >
+                  <img
+                    src="/public/pdficon.png"
+                    alt={`PDF for ${item.fields.title}`}
+                    className="w-10 h-10 mr-2"
+                  />
+                </a>
+              )}
             </div>
           </div>
         </div>

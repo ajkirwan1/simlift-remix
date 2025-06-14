@@ -4,12 +4,16 @@ import { IconContext } from "react-icons";
 import { RxCross1 } from "react-icons/rx";
 import { VscMenu } from "react-icons/vsc";
 
-export default function MobileHeaderIcons({setMobileNavOpen}: { setMobileNavOpen: React.Dispatch<React.SetStateAction<boolean>> }) {
+export default function MobileHeaderIcons({
+  setMobileNavOpen,
+}: {
+  setMobileNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const [mobileIconOpen, setMobileIconOpen] = useState<boolean>(false);
 
   const handleMobileIconOpen = () => {
     setMobileIconOpen((val) => !val);
-    setMobileNavOpen(val => !val)
+    setMobileNavOpen((val) => !val);
   };
 
   return (
@@ -24,7 +28,7 @@ export default function MobileHeaderIcons({setMobileNavOpen}: { setMobileNavOpen
         }
       >
         {mobileIconOpen ? (
-          <IconContext.Provider value={{ color: "black", size: "35px" }}>
+          <IconContext.Provider value={{ color: "white", size: "35px" }}>
             <RxCross1 />
           </IconContext.Provider>
         ) : (
