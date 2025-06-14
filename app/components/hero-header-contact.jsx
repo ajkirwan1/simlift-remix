@@ -10,7 +10,7 @@ export default function HeaderHeroContact() {
   return (
     <header className="flex justify-between items-center h-20v text-white font-thin">
       {mobileNavOpen && (
-        <div className="absolute top-0 left-0 w-full h-lvh bg-white transition duration-300 ease-in-out text-black">
+        <div className="absolute top-0 left-0 w-full h-lvh bg-gradient-to-r from-simlift-left to-simlift-right transition duration-300 ease-in-out text-black">
           <ul className="flex flex-col h-100v items-center justify-center gap-7 text-3xl">
             <li>
               <NavLink to="/about">About</NavLink>

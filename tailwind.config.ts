@@ -5,11 +5,10 @@ import type { Config } from "tailwindcss";
 export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
-
     extend: {
       colors: {
-        "simlift-left": '#083a51',
-        "simlift-right": '#115978f7',
+        "simlift-left": "#083a51",
+        "simlift-right": "#115978f7",
       },
       height: {
         "10v": "10vh",
@@ -27,14 +26,17 @@ export default {
         "100v": "100vh",
       },
       borderWidth: {
-          "1px": "1"
+        "1px": "1",
       },
       minHeight: {
-        "85vh": "85vh"
+        "85vh": "85vh",
       },
       marginTop: {
-        "10v": "10vh"
-      }
+        "10v": "10vh",
+      },
+      fontSize: {
+        "text-xs": "0.9em",
+      },
       // fontFamily: {
       //   sans: [
       //     "Inter",
