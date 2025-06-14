@@ -19,7 +19,7 @@ export default function Contact() {
           alt=""
           className="object-cover w-full h-full filter brightness-[0.6]"
         />
-        <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 w-screen sm:w-4/5 pt-[7%] bg-[rgb(17,89,120,0.4)] rounded-[30px] p-[20px]">
+        <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 sm:w-2/3 bg-[rgb(17,89,120,0.4)] rounded-[30px] p-[0px] sm:p-[20px] sm:left-[16%] w-4/5 left-[10%]">
           <div className="hidden sm:block basis-2/6 text-amber-50">
             <div className="m-auto w-4/5 h-full text-center">
               <h3 className="text-4xl mt-20  font-extralight">Contact us</h3>
@@ -30,11 +30,11 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="m-3 sm:m-0 basis-4/6">
+          <div className="m-3 sm:m-0 basis-4/6 pb-6">
             <span className="text-white text-2xl"></span>
             <form
               method="post"
-              action="https://formsubmit.co/rejven777@gmail.com"
+              action="https://formsubmit.co/biuro@simlift.pl"
               className="sm:grid sm:grid-rows-auto sm:grid-cols-[50%_50%] h-fitneutral-400 p-6 rounded-md mt-2"
             >
               <input

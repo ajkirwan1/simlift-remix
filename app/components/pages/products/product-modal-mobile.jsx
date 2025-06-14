@@ -85,18 +85,20 @@ export default function ProductModalMobile({ handleClick, item }) {
                 Enquire
               </NavLink>
 
-              <a
-                href="/public/SimliftS.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="opacity-100 hover:opacity-100 sm:opacity-70  "
-              >
-                <img
-                  src="/public/pdficon.png"
-                  alt="ikona pdf"
-                  className="w-10 h-10 mr-2 "
-                />
-              </a>
+              {item.fields.pdf?.fields?.file?.url && (
+                <a
+                  href={`https:${item.fields.pdf.fields.file.url}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-100 hover:opacity-100 sm:opacity-70"
+                >
+                  <img
+                    src="/public/pdficon.png"
+                    alt={`PDF for ${item.fields.title}`}
+                    className="w-10 h-10 mr-2"
+                  />
+                </a>
+              )}
             </div>
           </div>
         </div>
