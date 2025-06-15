@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    font-family: 'Nunito Sans Variable', sans-serif;
+    font-family: "Nunito Sans Variable", sans-serif;
     width: 100%;
     height: auto;
   }
@@ -13,13 +13,12 @@
 @layer components {
   html,
   body {
-
     @apply bg-white
 
   
     /* @media (prefers-color-scheme: dark) {
       color-scheme: dark;
-    } */
+    } */;
   }
 
   .custom-swiper {
@@ -31,5 +30,11 @@
 
   .custom-swiper .swiper-slide {
     @apply transition-transform duration-300 opacity-70 w-2/4;
+  }
+}
+
+@layer utilities {
+  .swiper-nav-small {
+    --swiper-navigation-size: 30px;
   }
 }
