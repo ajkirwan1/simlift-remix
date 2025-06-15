@@ -3,6 +3,7 @@ import { useState } from "react";
 import { NavLink } from "@remix-run/react";
 import logo from "@public/Simlift.png";
 import MobileHeaderIcons from "~/components/mobile/header-icons.tsx";
+import i18n from "../../i18n";
 
 export default function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -19,6 +20,12 @@ export default function Header() {
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
+            </li>
+            <li>
+              <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+            </li>
+            <li>
+              <button onClick={() => i18n.changeLanguage("pl")}>PL</button>
             </li>
           </ul>
         </div>
@@ -37,6 +44,12 @@ export default function Header() {
           </li>
           <li className="text-xl hover:underline decoration-1">
             <NavLink to="/contact">Contact</NavLink>
+          </li>
+          <li>
+            <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+          </li>
+          <li>
+            <button onClick={() => i18n.changeLanguage("pl")}>PL</button>
           </li>
         </ul>
       </div>

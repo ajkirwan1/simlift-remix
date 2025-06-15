@@ -3,6 +3,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import heroImage from "/public/projector.jpg";
 import glassesImage from "/public/glasses.jpg";
 import HeaderHero from "~/components/header-hero";
@@ -107,6 +108,9 @@ export default function Index() {
   };
 
   const data = useLoaderData<typeof loader>();
+
+   const { t } = useTranslation("common");
+
   return (
     <>
       <div className="fixed top-0 w-full z-10 border-b-1">
@@ -133,7 +137,7 @@ export default function Index() {
                 className="text-2xl md:text-4xl w-3/4 text-center"
                 variants={itemTop}
               >
-                Ceiling-mounted projector lifts
+                {t("title")}
               </motion.h1>
               <motion.p
                 className="text-lg md:text-2xl/10 w-3/4 font-thin"
