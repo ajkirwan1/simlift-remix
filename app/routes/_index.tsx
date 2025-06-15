@@ -160,15 +160,15 @@ export default function Index() {
           />
           <div className="absolute flex flex-col w-[90%] top-[20%] sm:top-2/4 left-2/4 -translate-x-1/2 sm:-translate-y-1/2">
             <motion.div
-              className="flex flex-col items-center w-full text-white text-center mb-16"
+              className="flex flex-col items-center w-full text-white text-center mb-10"
               variants={container}
               initial="hidden"
               whileInView="show"
             >
-              <h1 className="text-2xl md:text-4xl mb-12 font-thin">
+              <h1 className="text-2xl md:text-4xl mb-6 font-normal">
                 HIGH QUALITY PRODUCTS
               </h1>
-              <p className="text-lg md:text-2xl font-normal">
+              <p className="text-lg md:text-2xl font-extralight">
                 Simlift became the no.1 producer of ceiling mounted projector
                 lifts in Poland
               </p>
@@ -180,21 +180,21 @@ export default function Index() {
               whileInView="show"
             >
               <motion.div
-                className="flex flex-col border border-solid rounded-lg shadow-2xl
-            text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
+                className="flex flex-col rounded-lg shadow-2xl
+            text-white text-4xl w-36 sm:w-52 h-16 sm:h-52 pt-2 bg-black-700 bg-opacity-80 items-center
+            justify-center invert hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(0)}
               >
                 <img alt="" src={process} className="h-7 sm:h-10 w-auto"></img>
-                <p className="text-black text-sm sm:text-lg mb-2 mt-[1vh]">
+                <p className="text-black font-normal text-sm sm:text-lg mb-2 mt-[1vh]">
                   Precision engineering
                 </p>
               </motion.div>
               <motion.div
-                className="flex flex-col border border-solid rounded-lg shadow-2xl
-            text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
+                className="flex flex-col rounded-lg shadow-2xl
+            text-white text-4xl w-36 sm:w-52 h-16 sm:h-52 pt-2 bg-black-700 bg-opacity-80 items-center
+            justify-center invert hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(1)}
               >
@@ -203,14 +203,14 @@ export default function Index() {
                   src={testpassed}
                   className="h-7 sm:h-10 w-auto"
                 ></img>
-                <p className="text-black text-sm sm:text-lg mb-2 mt-[1vh]">
+                <p className="text-black font-normal weight-400 text-sm sm:text-lg mb-2 mt-[1vh]">
                   Quality assurance
                 </p>
               </motion.div>
               <motion.div
-                className="flex flex-col border border-solid rounded-lg shadow-2xl
-            text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
+                className="flex flex-col rounded-lg shadow-2xl
+            text-white text-4xl w-36 sm:w-52 h-22 pt-8 sm:h-52 bg-black-700 bg-opacity-80 items-center
+            justify-center invert hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-4 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(2)}
               >
@@ -219,7 +219,7 @@ export default function Index() {
                   src={guarantee}
                   className="h-7 sm:h-10 w-auto"
                 ></img>
-                <p className="text-black text-sm sm:text-lg mb-2 mt-[1vh] p-4 pt-0">
+                <p className="text-black font-normal text-sm sm:text-lg mb-2 mt-[1vh] p-4 pt-0">
                   20 years of manufacturing
                 </p>
               </motion.div>
@@ -233,6 +233,8 @@ export default function Index() {
               <Swiper
                 style={{
                   "--swiper-navigation-color": "rgb(66, 66, 66)",
+                  "--swiper-navigation-size": "30px",
+                  "--swiper-navigation-sides-offset": "20px",
                 }}
                 className="h-full"
                 modules={[Navigation, Autoplay]}

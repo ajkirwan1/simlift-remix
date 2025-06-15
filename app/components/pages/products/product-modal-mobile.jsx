@@ -4,6 +4,7 @@ import { NavLink } from "@remix-run/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import close from "@public/close.png";
+import pdficon from "@public/pdficon.png";
 import "swiper/css";
 import "swiper/css/navigation";
 export default function ProductModalMobile({ handleClick, item }) {
@@ -24,6 +25,7 @@ export default function ProductModalMobile({ handleClick, item }) {
           </h2>
           <div className="mt-[2vh]">
             <Swiper
+              className="swiper-nav-small"
               // className="h-full"
               modules={[Navigation, Autoplay]}
               // ref={swiperRef}
@@ -93,7 +95,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                   className="opacity-100 hover:opacity-100 sm:opacity-70"
                 >
                   <img
-                    src="/public/pdficon.png"
+                    src={pdficon}
                     alt={`PDF for ${item.fields.title}`}
                     className="w-10 h-10 mr-2"
                   />
