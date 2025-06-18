@@ -8,6 +8,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import { useEffect } from "react";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n";
+
 import "@fontsource-variable/nunito-sans";
 
 import "./tailwind.css";
@@ -37,5 +41,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  useEffect(() => {
+    // initialize i18next on client side
+    i18n.init();
+  }, []);
+
+  return (
+    <I18nextProvider i18n={i18n}>
+      <Outlet />
+    </I18nextProvider>
+  );
 }

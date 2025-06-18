@@ -3,6 +3,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import heroImage from "/public/projector.jpg";
 import glassesImage from "/public/glasses.jpg";
 import HeaderHero from "~/components/header-hero";
@@ -75,17 +76,8 @@ const item = {
   },
 };
 
-const modalData = [
-  "Simlift’s ceiling-mounted projectors are crafted with precision engineering, designed to deliver flawless performance in any environment. Our cutting-edge technology ensures a seamless, stable, and precise viewing experience, setting a new standard for projection solutions.",
-  "We take quality assurance seriously. Each Simlift projector undergoes rigorous testing to ensure reliability, durability, and consistent performance. Our commitment to excellence means you can trust every installation for years to come.",
-  "With over 20 years of manufacturing experience, Simlift has perfected the art of ceiling-mounted projectors. Our long-standing expertise guarantees that every product is built to the highest standards, ensuring both innovation and reliability in every unit.",
-];
-
 export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
+  return [{ title: "Simlift" }, { name: "description", content: "Simlift" }];
 };
 
 export async function loader() {
@@ -107,6 +99,15 @@ export default function Index() {
   };
 
   const data = useLoaderData<typeof loader>();
+
+  const { t } = useTranslation("common");
+
+  const modalData = [
+    { text: t("modal1") },
+    { text: t("modal2") },
+    { text: t("modal3") },
+  ];
+
   return (
     <>
       <div className="fixed top-0 w-full z-10 border-b-1">
@@ -133,16 +134,15 @@ export default function Index() {
                 className="text-2xl md:text-4xl w-3/4 text-center"
                 variants={itemTop}
               >
-                Ceiling-mounted projector lifts
+                {t("title")}
               </motion.h1>
               <motion.p
                 className="text-lg md:text-2xl/10 w-3/4 font-thin"
                 variants={itemTop}
               >
-                Our aim is to deliver top-quality products
+                {t("aim1")}
                 <br />
-                From the beginning through the evaluation process we make sure
-                the quality is outstanding
+                {t("aim2")}
               </motion.p>
             </div>
           </motion.div>
@@ -150,7 +150,7 @@ export default function Index() {
         <section className="relative w-full h-screen snap-center">
           {backdropOpen && (
             <div>
-              <Modal handleModal={handleModal} chosenItem={chosenItem} />
+              <Modal handleModal={handleModal} chosenItem={chosenItem.text} />
             </div>
           )}
           <img
@@ -166,11 +166,10 @@ export default function Index() {
               whileInView="show"
             >
               <h1 className="text-2xl md:text-4xl mb-6 font-normal">
-                HIGH QUALITY PRODUCTS
+                {t("high")}
               </h1>
               <p className="text-lg md:text-2xl font-extralight">
-                Simlift became the no.1 producer of ceiling mounted projector
-                lifts in Poland
+                {t("producer")}
               </p>
             </motion.div>
             <motion.div
@@ -188,7 +187,7 @@ export default function Index() {
               >
                 <img alt="" src={process} className="h-7 sm:h-10 w-auto"></img>
                 <p className="text-black font-normal text-sm sm:text-lg mb-2 mt-[1vh]">
-                  Precision engineering
+                  {t("precision")}
                 </p>
               </motion.div>
               <motion.div
@@ -204,7 +203,7 @@ export default function Index() {
                   className="h-7 sm:h-10 w-auto"
                 ></img>
                 <p className="text-black font-normal weight-400 text-sm sm:text-lg mb-2 mt-[1vh]">
-                  Quality assurance
+                  {t("assurance")}
                 </p>
               </motion.div>
               <motion.div
@@ -220,7 +219,7 @@ export default function Index() {
                   className="h-7 sm:h-10 w-auto"
                 ></img>
                 <p className="text-black font-normal text-sm sm:text-lg mb-2 mt-[1vh] p-4 pt-0">
-                  20 years of manufacturing
+                  {t("20 years")}
                 </p>
               </motion.div>
             </motion.div>

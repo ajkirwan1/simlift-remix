@@ -2,12 +2,13 @@
 import type { ActionFunctionArgs } from "@remix-run/node";
 import glassesImage from "/public/glasses.jpg";
 import { Form, useActionData } from "@remix-run/react";
+import { useTranslation } from "react-i18next";
 import { contactFormSchema } from "../../validation/contact-form-schema";
 import HeaderHero from "~/components/header-hero";
 import Footer from "~/components/footer";
 export default function Contact() {
   const actionData = useActionData<typeof action>();
-
+  const { t } = useTranslation("common");
   return (
     <div className="h-100v">
       <div className="absolute top-0 w-full z-10 border-b-1">
@@ -22,7 +23,9 @@ export default function Contact() {
         <div className="flex flex-col-reverse sm:flex-row absolute top-[20%] sm:top-1/4 sm:right-32 sm:w-2/3 bg-[rgb(17,89,120,0.4)] rounded-[30px] p-[0px] sm:p-[20px] sm:left-[16%] w-4/5 left-[10%]">
           <div className="hidden sm:block basis-2/6 text-amber-50">
             <div className="m-auto w-4/5 h-full text-center">
-              <h3 className="text-4xl mt-20  font-extralight">Contact us</h3>
+              <h3 className="text-4xl mt-20  font-extralight">
+                {t("contact us")}
+              </h3>
               <div className="mt-10">
                 <p className="mb-2">biuro@simlift.pl</p>
                 <p className="mb-2">+48 798 729 285 </p>
@@ -34,7 +37,7 @@ export default function Contact() {
             <span className="text-white text-2xl"></span>
             <form
               method="post"
-              action="https://formsubmit.co/biuro@simlift.pl"
+              action="https://formsubmit.co/pawel@avers.com.pl"
               className="sm:grid sm:grid-rows-auto sm:grid-cols-[50%_50%] h-fitneutral-400 p-6 rounded-md mt-2"
             >
               <input
@@ -44,7 +47,7 @@ export default function Contact() {
               />
               <p className="col-start-1 col-end-2 row-start-1 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  <span className="text-white">Email Address:</span>
+                  <span className="text-white"> {t("email")}</span>
                   <input
                     type="email"
                     name="email"
@@ -57,7 +60,7 @@ export default function Contact() {
 
               <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  <span className="text-white">Name:</span>
+                  <span className="text-white"> {t("name")}</span>
                   <input
                     type="text"
                     name="name"
@@ -70,7 +73,7 @@ export default function Contact() {
 
               <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
-                  <span className="text-white">Contact number:</span>
+                  <span className="text-white">{t("contact number")}</span>
                   <input
                     type="tel"
                     name="tel"
@@ -82,7 +85,7 @@ export default function Contact() {
 
               <p className="row-start-1 row-end-4 col-start-2 h-full">
                 <label className="flex flex-col h-full">
-                  <span className="text-white">Message:</span>
+                  <span className="text-white">{t("message")}</span>
                   <textarea
                     name="message"
                     required
