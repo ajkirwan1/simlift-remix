@@ -13,6 +13,7 @@ import Footer from "~/components/footer";
 import { useLoaderData } from "@remix-run/react";
 import { getAllLifts } from "api/get-all-lifts";
 import ProductModalMobile from "~/components/pages/products/product-modal-mobile";
+import { useTranslation } from "react-i18next";
 
 interface Item {
   fields: {
@@ -53,6 +54,7 @@ export default function Products() {
   };
 
   const data = useLoaderData<typeof loader>();
+  const { t } = useTranslation("common");
 
   return (
     <>
@@ -72,11 +74,10 @@ export default function Products() {
       <div className="bg-gray-200">
         <div className="p-8 pb-0">
           <h1 className="text-2xl sm:text-4xl text-center text-gray-700">
-            Products
+            {t("products1")}
           </h1>
           <p className="mt-6 sm:mt-8 text-l sm:text-xl text-center font-light">
-            Simlift provides a range of high precision engineered
-            ceiling-mounted projector lifts
+            {t("products2")}
           </p>
         </div>
         <div className="block content-center h-65v mt-4 sm:mt-8">

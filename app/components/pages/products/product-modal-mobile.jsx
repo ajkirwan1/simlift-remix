@@ -7,7 +7,10 @@ import close from "@public/close.png";
 import pdficon from "@public/pdficon.png";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useTranslation } from "react-i18next";
+
 export default function ProductModalMobile({ handleClick, item }) {
+  const { t } = useTranslation("common");
   return (
     <>
       <div className="fixed h-full w-screen bg-black bg-opacity-80 flex justify-center items-center z-50">
@@ -25,7 +28,6 @@ export default function ProductModalMobile({ handleClick, item }) {
           </h2>
           <div className="mt-[2vh]">
             <Swiper
-              className="swiper-nav-small"
               // className="h-full"
               modules={[Navigation, Autoplay]}
               // ref={swiperRef}
@@ -43,7 +45,7 @@ export default function ProductModalMobile({ handleClick, item }) {
               <SwiperSlide>
                 <div className="flex flex-col items-center ">
                   <h3 className="text-lg sm:text-2xl mb-4 sm:mt-2 w-[70%]">
-                    <b>Features</b>
+                    {t("features")}
                   </h3>
                   <ul className="w-[70%] list-inside mt:3 sm:mt-4 text-sm sm:text-lg pb-5 leading-7 ">
                     {item.fields.features.map((element, index) => (
@@ -55,7 +57,7 @@ export default function ProductModalMobile({ handleClick, item }) {
               <SwiperSlide>
                 <div className="flex flex-col items-center mt-3">
                   <h3 className="text-lg sm:text-2xl mb-4 sm:mt-0 w-[70%]">
-                    <b>Operational Accessories:</b>
+                    {t("operational accessories")}
                   </h3>
                   <ul className=" w-[70%] list-inside mt:2 sm:mt-5 text-sm sm:text-lg leading-6">
                     {item.fields.accessories.map((element, index) => (
@@ -75,7 +77,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                 onClick={() => handleClick()}
                 onKeyDown={(e) => e.key === "Enter" && handleClick(item)}
               >
-                All Products
+                {t("All products")}
               </span>
               <NavLink
                 className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border font-normal hover:bg-sky-800"
@@ -84,7 +86,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                   document.body.style.overflow = "unset";
                 }}
               >
-                Enquire
+                {t("Enquire")}
               </NavLink>
 
               {item.fields.pdf?.fields?.file?.url && (

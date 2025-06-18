@@ -19,7 +19,7 @@ export default function Footer() {
           <p>05-825 Kałęczyn, Poland</p>
         </div>
         <div className="text-xxs leading-8 sm:text-xs mb-5 sm:mr-5 sm:mb-0 text-center order-2">
-          <p>biuro@simlift.pl</p>
+          <p>pawel@avers.com.pl</p>
           <p>+48 798 729 285</p>
           <p>+48 601 302 840</p>
         </div>
