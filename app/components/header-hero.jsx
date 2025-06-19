@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "@remix-run/react";
 import logo from "@public/Simlift.png";
 import MobileHeaderIcons from "~/components/mobile/header-icons.tsx";
-import i18n from "../../i18n";
+import i18n from "../../i18n.client";
 
 export default function HeaderHero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);

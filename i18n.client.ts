@@ -1,9 +1,7 @@
-/** @format */
-
 import i18n from "i18next";
-import HttpBackend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
+import HttpBackend from "i18next-http-backend";
 
 i18n
   .use(HttpBackend)
@@ -12,16 +10,11 @@ i18n
   .init({
     fallbackLng: "en",
     debug: false,
-    interpolation: {
-      escapeValue: false,
-    },
-    ns: ["common"], // <-- add your namespaces here
+    interpolation: { escapeValue: false },
+    ns: ["common"],
     defaultNS: "common",
     backend: {
-      loadPath: (lngs, namespaces) => {
-        const lng = lngs[0].split("-")[0]; // strip region
-        return `/locales/${lng}/${namespaces[0]}.json`;
-      },
+      loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
   });
 

@@ -10,7 +10,7 @@ import {
 
 import { useEffect } from "react";
 import { I18nextProvider } from "react-i18next";
-import i18n from "../i18n";
+import i18n from "../i18n.client";
 
 import "@fontsource-variable/nunito-sans";
 
@@ -25,7 +25,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
           rel="stylesheet"
