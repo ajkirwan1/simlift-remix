@@ -3,6 +3,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import heroImage from "/public/projector.jpg";
 import glassesImage from "/public/glasses.jpg";
 import HeaderHero from "~/components/header-hero";
@@ -75,17 +76,8 @@ const item = {
   },
 };
 
-const modalData = [
-  "Simlift’s ceiling-mounted projectors are crafted with precision engineering, designed to deliver flawless performance in any environment. Our cutting-edge technology ensures a seamless, stable, and precise viewing experience, setting a new standard for projection solutions.",
-  "We take quality assurance seriously. Each Simlift projector undergoes rigorous testing to ensure reliability, durability, and consistent performance. Our commitment to excellence means you can trust every installation for years to come.",
-  "With over 20 years of manufacturing experience, Simlift has perfected the art of ceiling-mounted projectors. Our long-standing expertise guarantees that every product is built to the highest standards, ensuring both innovation and reliability in every unit.",
-];
-
 export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
+  return [{ title: "Simlift" }, { name: "description", content: "Simlift" }];
 };
 
 export async function loader() {
@@ -107,6 +99,15 @@ export default function Index() {
   };
 
   const data = useLoaderData<typeof loader>();
+
+  const { t } = useTranslation("common");
+
+  const modalData = [
+    { text: t("modal1") },
+    { text: t("modal2") },
+    { text: t("modal3") },
+  ];
+
   return (
     <>
       <div className="fixed top-0 w-full z-10 border-b-1">
@@ -133,16 +134,15 @@ export default function Index() {
                 className="text-2xl md:text-4xl w-3/4 text-center"
                 variants={itemTop}
               >
-                Ceiling-mounted projector lifts
+                {t("title")}
               </motion.h1>
               <motion.p
                 className="text-lg md:text-2xl/10 w-3/4 font-thin"
                 variants={itemTop}
               >
-                Our aim is to deliver top-quality products
+                {t("aim1")}
                 <br />
-                From the beginning through the evaluation process we make sure
-                the quality is outstanding
+                {t("aim2")}
               </motion.p>
             </div>
           </motion.div>
@@ -150,7 +150,7 @@ export default function Index() {
         <section className="relative w-full h-screen snap-center">
           {backdropOpen && (
             <div>
-              <Modal handleModal={handleModal} chosenItem={chosenItem} />
+              <Modal handleModal={handleModal} chosenItem={chosenItem.text} />
             </div>
           )}
           <img
@@ -160,17 +160,16 @@ export default function Index() {
           />
           <div className="absolute flex flex-col w-[90%] top-[20%] sm:top-2/4 left-2/4 -translate-x-1/2 sm:-translate-y-1/2">
             <motion.div
-              className="flex flex-col items-center w-full text-white text-center mb-16"
+              className="flex flex-col items-center w-full text-white text-center mb-10"
               variants={container}
               initial="hidden"
               whileInView="show"
             >
-              <h1 className="text-2xl md:text-4xl mb-12 font-thin">
-                HIGH QUALITY PRODUCTS
+              <h1 className="text-2xl md:text-4xl mb-6 font-normal">
+                {t("high")}
               </h1>
-              <p className="text-lg md:text-2xl font-normal">
-                Simlift became the no.1 producer of ceiling mounted projector
-                lifts in Poland
+              <p className="text-lg md:text-2xl font-extralight">
+                {t("producer")}
               </p>
             </motion.div>
             <motion.div
@@ -180,21 +179,21 @@ export default function Index() {
               whileInView="show"
             >
               <motion.div
-                className="flex flex-col border border-solid rounded-lg shadow-2xl
-            text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
+                className="flex flex-col rounded-lg shadow-2xl
+            text-white text-4xl w-36 sm:w-52 h-16 sm:h-52 pt-2 bg-black-700 bg-opacity-80 items-center
+            justify-center invert hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(0)}
               >
                 <img alt="" src={process} className="h-7 sm:h-10 w-auto"></img>
-                <p className="text-black text-sm sm:text-lg mb-2 mt-[1vh]">
-                  Precision engineering
+                <p className="text-black font-normal text-sm sm:text-lg mb-2 mt-[1vh]">
+                  {t("precision")}
                 </p>
               </motion.div>
               <motion.div
-                className="flex flex-col border border-solid rounded-lg shadow-2xl
-            text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
+                className="flex flex-col rounded-lg shadow-2xl
+            text-white text-4xl w-36 sm:w-52 h-16 sm:h-52 pt-2 bg-black-700 bg-opacity-80 items-center
+            justify-center invert hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(1)}
               >
@@ -203,14 +202,14 @@ export default function Index() {
                   src={testpassed}
                   className="h-7 sm:h-10 w-auto"
                 ></img>
-                <p className="text-black text-sm sm:text-lg mb-2 mt-[1vh]">
-                  Quality assurance
+                <p className="text-black font-normal weight-400 text-sm sm:text-lg mb-2 mt-[1vh]">
+                  {t("assurance")}
                 </p>
               </motion.div>
               <motion.div
-                className="flex flex-col border border-solid rounded-lg shadow-2xl
-            text-white text-4xl w-36 sm:w-52 h-32 sm:h-52 bg-slate-100 bg-opacity-80 items-center
-            justify-center  hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-6 sm:mb-0"
+                className="flex flex-col rounded-lg shadow-2xl
+            text-white text-4xl w-36 sm:w-52 h-22 pt-8 sm:h-52 bg-black-700 bg-opacity-80 items-center
+            justify-center invert hover:bg-slate-400 hover:bg-opacity-50 hover:cursor-pointer text-center mb-4 sm:mb-0"
                 variants={item}
                 onClick={() => handleModal(2)}
               >
@@ -219,8 +218,8 @@ export default function Index() {
                   src={guarantee}
                   className="h-7 sm:h-10 w-auto"
                 ></img>
-                <p className="text-black text-sm sm:text-lg mb-2 mt-[1vh] p-4 pt-0">
-                  20 years of manufacturing
+                <p className="text-black font-normal text-sm sm:text-lg mb-2 mt-[1vh] p-4 pt-0">
+                  {t("20 years")}
                 </p>
               </motion.div>
             </motion.div>
@@ -233,6 +232,8 @@ export default function Index() {
               <Swiper
                 style={{
                   "--swiper-navigation-color": "rgb(66, 66, 66)",
+                  "--swiper-navigation-size": "30px",
+                  "--swiper-navigation-sides-offset": "20px",
                 }}
                 className="h-full"
                 modules={[Navigation, Autoplay]}

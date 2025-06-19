@@ -2,6 +2,7 @@
 import Footer from "~/components/footer";
 import Header from "~/components/header";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 import { useLoaderData } from "@remix-run/react";
 //import { createLoader } from "~/lib/contentful.server";
@@ -32,7 +33,7 @@ const item = {
 
 export default function About() {
   //const { content } = useLoaderData();
-
+  const { t } = useTranslation("common");
   return (
     <>
       <div className="flex flex-col min-h-85vh items-center bg-gray-200">
@@ -46,46 +47,26 @@ export default function About() {
           whileInView="show"
         >
           <motion.h1 className="text-2xl sm:text-4xl text-center text-gray-700">
-            About
+            {t("about0")}
           </motion.h1>
 
           <motion.p
             className="text-base-8 sm:text-lg/9 max-w-[400px] sm:max-w-[600px] px-6 text-center"
             variants={item}
           >
-            Avers Screens has been a manufacturer of screens and a wide range of
-            projection accessories for over 20 years.
-            <br />
-            15 years ago we started the production of projector lifts.
-            <br />
-            Lifts are now our main product.
-            <br />
-            Such concentration has allowed us to refine the design and
-            technology of these devices. As a result, our lifts are practically
-            failure-free.
+            {t("about1")}
           </motion.p>
           <motion.p
             className="text-base-8 sm:text-lg/9 max-w-[400px] sm:max-w-[600px] text-center border-t-2 p-6 pb-0 border-cyan-800"
             variants={item}
           >
-            There are almost 3,000 of them in operation in Poland and Europe.
-            <br />
-            We try to constantly modify our devices to ensure the compatibility
-            of the offer with the current offer of multimedia projectors on the
-            market.
-            <br />
-            We are also open to individual customer requirements. We also make
-            individual non-standard lifts.
+            {t("about2")}
           </motion.p>
           <motion.p
             className="text-base-8 sm:text-lg/9 max-w-[400px] sm:max-w-[600px] text-center border-t-2 p-6 border-cyan-800"
             variants={item}
           >
-            Our portfolio includes lifts with a reach of 4 meters and a load
-            capacity of 80 kg.
-            <br />
-            We always remain loyal to our business clients (B2B) who make up 90%
-            of our customer base.
+            {t("about3")}
           </motion.p>
         </motion.div>
       </div>

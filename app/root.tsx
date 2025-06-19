@@ -8,6 +8,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import { useEffect } from "react";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n.client";
+
 import "@fontsource-variable/nunito-sans";
 
 import "./tailwind.css";
@@ -21,7 +25,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
           rel="stylesheet"
@@ -37,5 +41,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  useEffect(() => {
+    // initialize i18next on client side
+    i18n.init();
+  }, []);
+
+  return (
+    <I18nextProvider i18n={i18n}>
+      <Outlet />
+    </I18nextProvider>
+  );
 }
