@@ -27,7 +27,7 @@ export default function Contact() {
                 {t("contact us")}
               </h3>
               <div className="mt-10">
-                <p className="mb-2">biuro@simlift.pl</p>
+                <p className="mb-2">pawel@avers.com.pl</p>
                 <p className="mb-2">+48 798 729 285 </p>
                 <p>+48 601 302 840</p>
               </div>
@@ -52,7 +52,7 @@ export default function Contact() {
                     type="email"
                     name="email"
                     required
-                    placeholder="your@email.com"
+                    placeholder={t("emailcom")}
                     className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
                   />
                 </label>
@@ -65,12 +65,11 @@ export default function Contact() {
                     type="text"
                     name="name"
                     required
-                    placeholder="Your name"
+                    placeholder={t("yourname")}
                     className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
                   />
                 </label>
               </p>
-
               <p className="col-start-1 col-end-2 h-full sm:w-5/6">
                 <label className="flex flex-col">
                   <span className="text-white">{t("contact number")}</span>
@@ -89,7 +88,7 @@ export default function Contact() {
                   <textarea
                     name="message"
                     required
-                    placeholder="Write your message to us here"
+                    placeholder={t("write-message")}
                     className="border border-solid rounded-md border-sky-900 basis-full p-2 mb-2 mt-0"
                   ></textarea>
                 </label>
@@ -100,7 +99,7 @@ export default function Contact() {
                   type="submit"
                   className="border border-solid w-32 h-12 m-auto rounded-md bg-stone-50 text-black text-sm font-normal hover:bg-slate-400 opacity-70 mt-10 sm:mr-10"
                 >
-                  Submit
+                  {t("submit")}
                 </button>
               </div>
             </form>
@@ -111,37 +110,3 @@ export default function Contact() {
     </div>
   );
 }
-/*
-export async function action({ request }: ActionFunctionArgs) {
-  const formData = await request.formData();
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const tel = formData.get("tel");
-  const message = formData.get("message");
-
-  console.log(name, email, tel, message);
-
-  const validateResult = contactFormSchema.safeParse({
-    name: name,
-    email: email,
-    phone: tel,
-    message: message,
-  });
-
-  if (!validateResult.success) {
-    const formFieldErrors = validateResult.error.flatten().fieldErrors;
-    console.log(formFieldErrors);
-
-    const errorObject = {
-      name: formFieldErrors.name,
-      phone: formFieldErrors.phone,
-      email: formFieldErrors.email,
-      message: formFieldErrors.message,
-    };
-
-    return errorObject;
-  }
-
-  return null;
-}
-*/
