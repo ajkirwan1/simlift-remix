@@ -54,7 +54,7 @@ export default function Products() {
   };
 
   const data = useLoaderData<typeof loader>();
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   return (
     <>
