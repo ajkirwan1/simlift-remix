@@ -92,8 +92,8 @@ export default function Products() {
                     key={index}
                     onClick={() => handleClick(item)}
                     onKeyDown={(e) => e.key === "Enter" && handleClick(item)}
-                    className="text-center border-2 shadow-[1px_2px_3px_2px_rgba(12,12,12,0.2)] rounded-md border-transparent w-4/5 p-7 bg-white hover:cursor-pointer hover:rounded-md hover:border-indigo-200 hover:border-current hover:scale-[1.05] transition-transform"
-                  >
+                    className="flex flex-col text-center border-2 shadow-[1px_2px_3px_2px_rgba(12,12,12,0.2)] rounded-md border-transparent w-4/5 p-7 bg-white hover:cursor-pointer hover:rounded-md hover:border-indigo-200 hover:border-current hover:scale-[1.05] transition-transform"
+                    >
                     <img
                       alt="alt"
                       src={item.fields.image!.fields.file.url}
