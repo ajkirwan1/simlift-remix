@@ -84,7 +84,7 @@ export default function ProductModalMobile({ handleClick, item }) {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="flex flex-col items-center mt-3">
                 <h3 className="text-lg sm:text-2xl mb-4 sm:mt-0 w-[70%]">
                   {t("operational accessories")}
@@ -95,7 +95,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                   ))}
                 </ul>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
 
