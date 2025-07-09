@@ -75,7 +75,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                 <h3 className="text-lg sm:text-2xl mb-4 sm:mt-2 w-[70%]">
                   {t("features")}
                 </h3>
-                <ul className="w-[70%] list-inside mt:3 sm:mt-4 text-sm sm:text-lg pb-5 leading-7">
+                <ul className="w-[70%] list-inside mt:3 text-sm sm:text-lg pb-5 leading-7">
                   {featuresArray.map((line, index) => (
                     <li key={index}>{line}</li>
                   ))}
