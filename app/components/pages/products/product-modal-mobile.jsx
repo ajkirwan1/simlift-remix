@@ -75,7 +75,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                 <h3 className="text-lg sm:text-2xl mb-4 sm:mt-2 w-[70%]">
                   {t("features")}
                 </h3>
-                <ul className="w-[70%] list-inside mt:3 text-sm sm:text-lg pb-5 leading-7">
+                <ul className="w-[70%] list-inside mt:3 sm:mt-4 text-sm sm:text-lg pb-5 leading-7">
                   {featuresArray.map((line, index) => (
                     <li key={index}>{line}</li>
                   ))}
@@ -99,7 +99,7 @@ export default function ProductModalMobile({ handleClick, item }) {
         </div>
 
         <div className="flex flex-1">
-          <div className="flex flex-1 justify-center items-center gap-5 text-center mt-8 mb-2">
+          <div className="flex flex-1 justify-center items-center gap-5 text-center mb-2">
             <div className="flex flex-1 justify-center items-center gap-5">
               {/* <span
                 role="button"
@@ -121,7 +121,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                 {t("Enquire")}
               </NavLink>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 mr-3">
             {pdfUrl && (
               <div
                 style={{
