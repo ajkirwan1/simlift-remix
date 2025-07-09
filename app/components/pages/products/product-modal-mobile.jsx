@@ -16,11 +16,10 @@ export default function ProductModalMobile({ handleClick, item }) {
 
   // Find matching localized PDF
   const matchingPdf = item.fields.pdfProduct?.find(
-    (pdf) =>
-      pdf &&
-      pdf.fields &&
-      pdf.fields.description === currentLang
+    (pdf) => pdf && pdf.fields && pdf.fields.description === currentLang
   );
+
+  const technicalPdf = item.fields.pdf?.fields?.file?.url;
 
   const pdfUrl = matchingPdf?.fields?.file?.url;
 
@@ -84,7 +83,7 @@ export default function ProductModalMobile({ handleClick, item }) {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="flex flex-col items-center mt-3">
                 <h3 className="text-lg sm:text-2xl mb-4 sm:mt-0 w-[70%]">
                   {t("operational accessories")}
@@ -95,7 +94,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                   ))}
                 </ul>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
 
@@ -122,18 +121,50 @@ export default function ProductModalMobile({ handleClick, item }) {
             </NavLink>
 
             {pdfUrl && (
-              <a
-                href={`https:${pdfUrl}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="opacity-100 hover:opacity-100 sm:opacity-70"
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
               >
-                <img
-                  src={pdficon}
-                  alt={`PDF for ${item.fields.title}`}
-                  className="w-10 h-10 mr-2"
-                />
-              </a>
+                <a
+                  href={`https:${pdfUrl}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-100 hover:opacity-100 sm:opacity-70"
+                >
+                  <img
+                    src={pdficon}
+                    alt={`PDF for ${item.fields.title}`}
+                    className="w-10 h-10 mr-2"
+                  />
+                </a>
+                <span>Technical Details</span>
+              </div>
+            )}
+            {technicalPdf && (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <a
+                  href={`https:${technicalPdf}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-100 hover:opacity-100 sm:opacity-70"
+                >
+                  <img
+                    src={pdficon}
+                    alt={`PDF for ${item.fields.title}`}
+                    className="w-10 h-10 mr-2"
+                  />
+                </a>
+                <span>Technical Drawing</span>
+              </div>
             )}
           </div>
         </div>
