@@ -100,26 +100,28 @@ export default function ProductModalMobile({ handleClick, item }) {
 
         <div className="flex flex-1">
           <div className="flex flex-1 justify-center items-center gap-5 text-center mt-8 mb-2">
-            <span
-              role="button"
-              tabIndex={0}
-              className="hover:cursor-pointer hover:underline"
-              onClick={() => handleClick()}
-              onKeyDown={(e) => e.key === "Enter" && handleClick(item)}
-            >
-              {t("All products")}
-            </span>
+            <div className="flex flex-1 justify-center items-center gap-5">
+              {/* <span
+                role="button"
+                tabIndex={0}
+                className="hover:cursor-pointer hover:underline"
+                onClick={() => handleClick()}
+                onKeyDown={(e) => e.key === "Enter" && handleClick(item)}
+              >
+                {t("All products")}
+              </span> */}
 
-            <NavLink
-              className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border font-normal hover:bg-sky-800"
-              to="/contact"
-              onClick={() => {
-                document.body.style.overflow = "unset";
-              }}
-            >
-              {t("Enquire")}
-            </NavLink>
-
+              <NavLink
+                className="flex justify-center items-center bg-sky-950 w-28 h-11 rounded-md text-white border-orange-900 border font-normal hover:bg-sky-800"
+                to="/contact"
+                onClick={() => {
+                  document.body.style.overflow = "unset";
+                }}
+              >
+                {t("Enquire")}
+              </NavLink>
+            </div>
+            <div className="flex flex-col gap-4">
             {pdfUrl && (
               <div
                 style={{
@@ -166,6 +168,7 @@ export default function ProductModalMobile({ handleClick, item }) {
                 <span>Technical Drawing</span>
               </div>
             )}
+            </div>
           </div>
         </div>
       </div>
